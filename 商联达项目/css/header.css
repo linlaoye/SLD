@@ -1,0 +1,517 @@
+/*重置*/
+			*{
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Microsoft YaHei',PingFangSC-Light,'helvetica neue','hiragino sans gb',arial,simsun,sans-serif;
+			}
+			ul,ol,dl{
+				list-style: none;
+			}
+			/*头部顶部*/
+			.header_top{
+				min-width: 1500px;
+				width: 100%;
+				height: 30px;
+				background: rgb(246,246,246);
+				padding-right: 160px;
+				box-sizing: border-box;
+				position: fixed;
+				z-index: 999;
+				top: 0px;
+				left: 0px;
+			}
+			/*头部顶部的右边导航栏*/
+			.header_top>.header_top_right{
+				width: 463px;
+				height: 30px;
+				line-height: 30px;
+				float: right;
+			}
+			/*右边导航栏的样式*/
+			.header_top>.header_top_right>a,.header_top>.header_top_right>span{
+				font-size: 12px;
+				color: black;
+				margin: 0px 5px;
+				text-decoration: none;
+			}
+			.header_top>.header_top_right>a:nth-of-type(5){
+				color: red;
+			}
+			/*头部*/
+			header{
+				min-width: 1500px;
+				width: 100%;
+				height: 70px;
+				background: white;
+				position: fixed;
+				top: 30px;
+				left: 0px;
+				z-index: 999;
+			}
+			/*更改类名让头部变化*/
+			.header_show{
+				background: black;
+			}
+			/*头部主要部分*/
+			header>.header_main{
+				width: 1200px;
+				height: 70px;
+				margin: 0px auto;
+			}
+			/*头部左侧logo*/
+			header>.header_main>.header_logo{
+				float: left;
+				margin-top: 10px;
+			}
+			header>.header_main>.header_logo>img{
+				height: 50px;
+			}
+			/*头部主要部分导航栏和样式*/
+			header>.header_main>nav{
+				width: 842px;
+				height: 70px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav{
+				width: 766px;
+				height: 100%;
+			}
+			header>.header_main>nav>.header_nav>li{
+				height: 68px;
+				line-height: 68px;
+				font-size: 18px;
+				padding: 0px 20px;
+				float: left;
+				border-bottom: 2px solid transparent;
+				cursor: pointer;
+			}
+			/*更改li类名让li里面的字变化(滚动条)*/
+			header>.header_main>nav>.header_nav>.li_show>a{
+				color:white;
+			}
+			/*移入导航栏的选项改变样式*/
+			header>.header_main>nav>.header_nav>li:hover{
+				border-bottom:2px solid black;
+			}
+			header>.header_main>nav>.header_nav>li:hover>a{
+				font-weight: 700;
+			}
+
+			/*软件产品下拉框*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production{
+				min-width: 1500px;
+				height: 506px;
+				border-top: 1px solid #6A00AF;
+				position: absolute;
+				background: white;
+				top: 70px;
+				left: 0px;
+				right: 0px;
+				box-sizing: border-box;
+				display: none;
+				z-index: 999;
+			}
+			/*移入软件产品让下拉框出现*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2):hover>.soft_production{
+				display: block;
+			}
+			/*软件产品下拉框的主要部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main{
+				width: 1200px;
+				height: 430px;
+				padding-top: 10px;
+				margin: 0px auto;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			/*软件产品下拉框主要部分的左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left{
+				width: 884px;
+				height: 430px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list{
+				width: 100%;
+				height: 100%;
+			}
+			/*软件产品下拉框主要部分的左侧的每个选项*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li{
+				width: 264px;
+				height: 85px;
+				float: left;
+				margin: 12px 30px 5px 0px ;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a{
+				color: #333333;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>img{
+				width: 48px;
+				height: 48px;
+				margin-right: 14px;
+				margin-top: 6px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content{
+				width: 200px;
+				height: 60px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3{
+				color: #333333;
+				line-height: 24px;
+				font-size: 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3>em{
+				color: red;
+				margin-left: 10px;
+				font-size: 12px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>p{
+				line-height: 18px;
+				font-weight: lighter;
+			}
+			/*软件产品里面选项中的第二个选项里的new变绿*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:nth-of-type(2)>a>.text_content>h3>em{
+				color: green;
+			}
+			/*软件产品下拉框选项移入字体变蓝*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a{
+				color: deepskyblue;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a>.text_content>h3{
+				color: deepskyblue;
+			}
+			/*软件产品下拉框主要部分的右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right{
+				width: 316px;
+				padding-left: 14px;
+				border-left: 1px solid #CCCCCC;
+				box-sizing: border-box;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>h3{
+				color: #333333;
+				font-size: 16px;
+				line-height: 36px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul{
+				height: 73px;
+				margin: 4px 0px 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li{
+				width: 84px;
+				height: 26px;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li:nth-of-type(3n){
+				margin-right: 0px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li>img{
+				width: 84px;
+				height: 26px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>p{
+				color: #333333;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 18px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>div{
+				width: 315px;
+				height: 205px;
+				margin-top: 10px;
+				transform: translateX(-6px);
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>div>img{
+				width: 315px;
+			}
+			/*软件产品下拉框尾部部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer{
+				height: 75px;
+				border-top: 1px solid #EEEEEE;
+				box-sizing: border-box;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain{
+				width: 1200px;
+				height: 75px;
+				line-height: 74px;
+				margin: 0px auto;
+			}
+			/*软件产品下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain.footer_contain_left{
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd{
+				height: 73px;
+				font-size: 14px;
+				color: #999;
+				font-weight: lighter;
+				font-family: MicrosoftYaHeiLaght;
+				margin-right: 30px;
+				float: left;
+			}
+			/*移入软件产品下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd:hover{
+				color: red;
+			}
+			/*软件产品下拉框尾部右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right{
+				color: red;
+				font-size: 14px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right>span{
+				text-decoration: underline;
+			}
+			
+			/*解决方案的下拉框*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production{
+				min-width: 1500px;
+				height: 450px;
+				border-top: 1px solid #6A00AF;
+				position: absolute;
+				top: 70px;
+				left: 0px;
+				right: 0px;
+				background: white;
+				box-sizing: border-box;
+				display: none;
+				z-index: 999;
+			}
+			/*解决方案让下拉框出现*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3):hover>.soft_production{
+				display: block;
+			}
+			/*解决方案的主要部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main{
+				width: 1200px;
+				height: 370px;
+				padding-top: 10px;
+				margin: 0px auto;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			/*解决方案下拉框主要部分的左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left{
+				width: 884px;
+				height: 430px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list{
+				width: 100%;
+				height: 100%;
+			}
+			/*解决方案下拉框主要部分的左侧的每个选项*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li{
+				width: 264px;
+				height: 60px;
+				float: left;
+				margin: 12px 30px 5px 0px ;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a{
+				color: #333333;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>img{
+				width: 48px;
+				height: 48px;
+				margin-right: 14px;
+				margin-top: 6px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content{
+				width: 200px;
+				height: 60px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3{
+				color: #333333;
+				line-height: 24px;
+				font-size: 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3>em{
+				color: red;
+				margin-left: 10px;
+				font-size: 12px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>p{
+				line-height: 18px;
+				margin-top: 7px;
+				font-weight: lighter;
+			}
+			/*解决方案下拉框选项移入字体变蓝*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a{
+				color: deepskyblue;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a>.text_content>h3{
+				color: deepskyblue;
+			}
+			/*解决方案下拉框主要部分的右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right{
+				width: 316px;
+				padding-left: 14px;
+				border-left: 1px solid #CCCCCC;
+				box-sizing: border-box;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>h3{
+				color: #333333;
+				font-size: 16px;
+				line-height: 36px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul{
+				height: 73px;
+				margin: 4px 0px 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li{
+				width: 84px;
+				height: 26px;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li:nth-of-type(3n){
+				margin-right: 0px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li>img{
+				width: 84px;
+				height: 26px;
+			}
+			/*解决方案下拉框右侧两列布局(配套软件推荐)*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div{
+				width: 138px;
+				height: 32px;
+				font-size: 14px;
+				border-radius: 10px;
+				line-height: 32px;
+				text-align: center;
+				float: left;
+				margin-bottom: 21px;
+				margin-right: 21px;
+			}
+			/*解决方案下拉框右侧清除每排第二个的右边外边距*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(2n){
+				margin-right: 0px;
+			}
+			/*解决方案右侧两栏每个框的颜色和移入*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(1){
+				border:1px solid rgb(253,151,5);
+				color: rgb(253,151,5);
+			}
+			/*解决方案右侧两栏移入第一个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(1):hover{
+				background: rgb(253,151,5);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(2){
+				border:1px solid rgb(247,151,113);
+				color: rgb(247,151,113);
+			}
+			/*解决方案右侧两栏移入第二个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(2):hover{
+				background: rgb(247,151,113);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(3){
+				border:1px solid rgb(69,213,199);
+				color: rgb(69,213,199);
+			}
+			/*解决方案右侧两栏移入第三个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(3):hover{
+				background: rgb(69,213,199);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(4){
+				border:1px solid rgb(91,193,251);
+				color: rgb(91,193,251);
+			}
+			/*解决方案右侧两栏移入第四个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(4):hover{
+				background: rgb(91,193,251);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(5){
+				border:1px solid rgb(237,95,95);
+				color: rgb(237,95,95);
+			}
+			/*解决方案右侧两栏移入第五个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(5):hover{
+				background: rgb(237,95,95);
+				color: white;
+			}
+			
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(6){
+				border:1px solid rgb(197,125,249);
+				color: rgb(197,125,249);
+			}	
+			/*解决方案右侧两栏移入六个变背景颜色加文字变白*/		
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(6):hover{
+				background: rgb(197,125,249);
+				color: white;
+			}
+			
+			/*解决方案下拉框尾部部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer{
+				height: 75px;
+				border-top: 1px solid #EEEEEE;
+				box-sizing: border-box;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain{
+				width: 1200px;
+				height: 75px;
+				line-height: 74px;
+				margin: 0px auto;
+			}
+			/*解决方案下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain.footer_contain_left{
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd{
+				height: 73px;
+				font-size: 14px;
+				color: #999;
+				font-weight: lighter;
+				font-family: MicrosoftYaHeiLaght;
+				margin-right: 30px;
+				float: left;
+			}
+			/*解决方案移入下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd:hover{
+				color: red;
+			}
+			/*解决方案下拉框尾部右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right{
+				color: red;
+				font-size: 14px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right>span{
+				text-decoration: underline;
+			}
+			/*清除a标签的固定样式*/
+			header>.header_main>nav>.header_nav>li>a{
+				color: black;
+				text-decoration: none;
+			}
+			/*头部主要部分导航栏右侧图片*/
+			header>.header_main>nav>.header_nav_right_logo{
+				position: absolute;
+				top: 10px;
+				right: 162px;
+				text-align: center;
+				cursor: pointer;
+			}
+			header>.header_main>nav>.header_nav_right_logo>img{
+				width: 45px;
+				height: 32px;
+			}
+			header>.header_main>nav>.header_nav_right_logo>p{
+				font-size: 14px;
+			}
+			/*更改类名变白色*/
+			header>.header_main>nav>.header_nav_right_logo>.p_show{
+				color: white;
+			}
