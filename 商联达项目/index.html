@@ -1,0 +1,3004 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>商联达官网_微信分销系统_多用户商城系统_B2B2C多用户商城系统解决方案</title>
+		<link rel="icon" href="img/toumtupian.png"/>
+		<script src="js/jquery-3.5.0.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<style>
+			/*重置*/
+			*{
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Microsoft YaHei',PingFangSC-Light,'helvetica neue','hiragino sans gb',arial,simsun,sans-serif;
+			}
+			ul,ol,dl{
+				list-style: none;
+			}
+			/*头部顶部*/
+			.header_top{
+				min-width: 1500px;
+				width: 100%;
+				height: 30px;
+				background: rgb(246,246,246);
+				padding-right: 160px;
+				box-sizing: border-box;
+				position: fixed;
+				z-index: 999;
+				top: 0px;
+				left: 0px;
+			}
+			/*头部顶部的右边导航栏*/
+			.header_top>.header_top_right{
+				width: 463px;
+				height: 30px;
+				line-height: 30px;
+				float: right;
+			}
+			/*右边导航栏的样式*/
+			.header_top>.header_top_right>a,.header_top>.header_top_right>span{
+				font-size: 12px;
+				color: black;
+				margin: 0px 5px;
+				text-decoration: none;
+			}
+			.header_top>.header_top_right>a:nth-of-type(5){
+				color: red;
+			}
+			/*头部*/
+			header{
+				min-width: 1500px;
+				width: 100%;
+				height: 70px;
+				background: white;
+				position: fixed;
+				top: 30px;
+				left: 0px;
+				z-index: 999;
+			}
+			/*更改类名让头部变化*/
+			.header_show{
+				background: black;
+			}
+			/*头部主要部分*/
+			header>.header_main{
+				width: 1200px;
+				height: 70px;
+				margin: 0px auto;
+			}
+			/*头部左侧logo*/
+			header>.header_main>.header_logo{
+				float: left;
+				margin-top: 10px;
+			}
+			header>.header_main>.header_logo>img{
+				height: 50px;
+			}
+			/*头部主要部分导航栏和样式*/
+			header>.header_main>nav{
+				width: 842px;
+				height: 70px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav{
+				width: 766px;
+				height: 100%;
+			}
+			header>.header_main>nav>.header_nav>li{
+				height: 68px;
+				line-height: 68px;
+				font-size: 18px;
+				padding: 0px 20px;
+				float: left;
+				border-bottom: 2px solid transparent;
+				cursor: pointer;
+			}
+			/*更改li类名让li里面的字变化(滚动条)*/
+			header>.header_main>nav>.header_nav>.li_show>a{
+				color:white;
+			}
+			/*移入导航栏的选项改变样式*/
+			header>.header_main>nav>.header_nav>li:hover{
+				border-bottom:2px solid black;
+			}
+			header>.header_main>nav>.header_nav>li:hover>a{
+				font-weight: 700;
+			}
+
+			/*软件产品下拉框*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production{
+				min-width: 1500px;
+				height: 506px;
+				border-top: 1px solid #6A00AF;
+				position: absolute;
+				background: white;
+				top: 70px;
+				left: 0px;
+				box-sizing: border-box;
+				display: none;
+				z-index: 999;
+			}
+			/*移入软件产品让下拉框出现*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2):hover>.soft_production{
+				display: block;
+			}
+			/*软件产品下拉框的主要部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main{
+				width: 1200px;
+				height: 430px;
+				padding-top: 10px;
+				margin: 0px auto;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			/*软件产品下拉框主要部分的左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left{
+				width: 884px;
+				height: 430px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list{
+				width: 100%;
+				height: 100%;
+			}
+			/*软件产品下拉框主要部分的左侧的每个选项*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li{
+				width: 264px;
+				height: 85px;
+				float: left;
+				margin: 12px 30px 5px 0px ;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a{
+				color: #333333;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>img{
+				width: 48px;
+				height: 48px;
+				margin-right: 14px;
+				margin-top: 6px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content{
+				width: 200px;
+				height: 60px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3{
+				color: #333333;
+				line-height: 24px;
+				font-size: 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3>em{
+				color: red;
+				margin-left: 10px;
+				font-size: 12px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>p{
+				line-height: 18px;
+				font-weight: lighter;
+			}
+			/*软件产品里面选项中的第二个选项里的new变绿*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:nth-of-type(2)>a>.text_content>h3>em{
+				color: green;
+			}
+			/*软件产品下拉框选项移入字体变蓝*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a{
+				color: deepskyblue;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a>.text_content>h3{
+				color: deepskyblue;
+			}
+			/*软件产品下拉框主要部分的右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right{
+				width: 316px;
+				padding-left: 14px;
+				border-left: 1px solid #CCCCCC;
+				box-sizing: border-box;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>h3{
+				color: #333333;
+				font-size: 16px;
+				line-height: 36px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul{
+				height: 73px;
+				margin: 4px 0px 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li{
+				width: 84px;
+				height: 26px;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li:nth-of-type(3n){
+				margin-right: 0px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li>img{
+				width: 84px;
+				height: 26px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>p{
+				color: #333333;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 18px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>div{
+				width: 315px;
+				height: 205px;
+				margin-top: 10px;
+				transform: translateX(-6px);
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.soft_production_main>.soft_production_main_right>div>img{
+				width: 315px;
+			}
+			/*软件产品下拉框尾部部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer{
+				height: 75px;
+				border-top: 1px solid #EEEEEE;
+				box-sizing: border-box;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain{
+				width: 1200px;
+				height: 75px;
+				line-height: 74px;
+				margin: 0px auto;
+			}
+			/*软件产品下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain.footer_contain_left{
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd{
+				height: 73px;
+				font-size: 14px;
+				color: #999;
+				font-weight: lighter;
+				font-family: MicrosoftYaHeiLaght;
+				margin-right: 30px;
+				float: left;
+			}
+			/*移入软件产品下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd:hover{
+				color: red;
+			}
+			/*软件产品下拉框尾部右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right{
+				color: red;
+				font-size: 14px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(2)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right>span{
+				text-decoration: underline;
+			}
+			
+			/*解决方案的下拉框*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production{
+				min-width: 1500px;
+				height: 450px;
+				border-top: 1px solid #6A00AF;
+				position: absolute;
+				top: 70px;
+				left: 0px;
+				background: white;
+				box-sizing: border-box;
+				display: none;
+				z-index: 999;
+			}
+			/*解决方案让下拉框出现*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3):hover>.soft_production{
+				display: block;
+			}
+			/*解决方案的主要部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main{
+				width: 1200px;
+				height: 370px;
+				padding-top: 10px;
+				margin: 0px auto;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			/*解决方案下拉框主要部分的左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left{
+				width: 884px;
+				height: 430px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list{
+				width: 100%;
+				height: 100%;
+			}
+			/*解决方案下拉框主要部分的左侧的每个选项*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li{
+				width: 264px;
+				height: 60px;
+				float: left;
+				margin: 12px 30px 5px 0px ;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a{
+				color: #333333;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>img{
+				width: 48px;
+				height: 48px;
+				margin-right: 14px;
+				margin-top: 6px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content{
+				width: 200px;
+				height: 60px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3{
+				color: #333333;
+				line-height: 24px;
+				font-size: 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>h3>em{
+				color: red;
+				margin-left: 10px;
+				font-size: 12px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li>a>.text_content>p{
+				line-height: 18px;
+				margin-top: 7px;
+				font-weight: lighter;
+			}
+			/*解决方案下拉框选项移入字体变蓝*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a{
+				color: deepskyblue;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_left>.main_left_list>li:hover>a>.text_content>h3{
+				color: deepskyblue;
+			}
+			/*解决方案下拉框主要部分的右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right{
+				width: 316px;
+				padding-left: 14px;
+				border-left: 1px solid #CCCCCC;
+				box-sizing: border-box;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>h3{
+				color: #333333;
+				font-size: 16px;
+				line-height: 36px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul{
+				height: 73px;
+				margin: 4px 0px 14px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li{
+				width: 84px;
+				height: 26px;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li:nth-of-type(3n){
+				margin-right: 0px;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>ul>li>img{
+				width: 84px;
+				height: 26px;
+			}
+			/*解决方案下拉框右侧两列布局(配套软件推荐)*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div{
+				width: 138px;
+				height: 32px;
+				font-size: 14px;
+				border-radius: 10px;
+				line-height: 32px;
+				text-align: center;
+				float: left;
+				margin-bottom: 21px;
+				margin-right: 21px;
+			}
+			/*解决方案下拉框右侧清除每排第二个的右边外边距*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(2n){
+				margin-right: 0px;
+			}
+			/*解决方案右侧两栏每个框的颜色和移入*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(1){
+				border:1px solid rgb(253,151,5);
+				color: rgb(253,151,5);
+			}
+			/*解决方案右侧两栏移入第一个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(1):hover{
+				background: rgb(253,151,5);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(2){
+				border:1px solid rgb(247,151,113);
+				color: rgb(247,151,113);
+			}
+			/*解决方案右侧两栏移入第二个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(2):hover{
+				background: rgb(247,151,113);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(3){
+				border:1px solid rgb(69,213,199);
+				color: rgb(69,213,199);
+			}
+			/*解决方案右侧两栏移入第三个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(3):hover{
+				background: rgb(69,213,199);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(4){
+				border:1px solid rgb(91,193,251);
+				color: rgb(91,193,251);
+			}
+			/*解决方案右侧两栏移入第四个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(4):hover{
+				background: rgb(91,193,251);
+				color: white;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(5){
+				border:1px solid rgb(237,95,95);
+				color: rgb(237,95,95);
+			}
+			/*解决方案右侧两栏移入第五个变背景颜色加文字变白*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(5):hover{
+				background: rgb(237,95,95);
+				color: white;
+			}
+			
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(6){
+				border:1px solid rgb(197,125,249);
+				color: rgb(197,125,249);
+			}	
+			/*解决方案右侧两栏移入六个变背景颜色加文字变白*/		
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.soft_production_main>.soft_production_main_right>div>div:nth-of-type(6):hover{
+				background: rgb(197,125,249);
+				color: white;
+			}
+			
+			/*解决方案下拉框尾部部分*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer{
+				height: 75px;
+				border-top: 1px solid #EEEEEE;
+				box-sizing: border-box;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain{
+				width: 1200px;
+				height: 75px;
+				line-height: 74px;
+				margin: 0px auto;
+			}
+			/*解决方案下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain.footer_contain_left{
+				float: left;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd{
+				height: 73px;
+				font-size: 14px;
+				color: #999;
+				font-weight: lighter;
+				font-family: MicrosoftYaHeiLaght;
+				margin-right: 30px;
+				float: left;
+			}
+			/*解决方案移入下拉框尾部左侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dt,header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_left>dl>dd:hover{
+				color: red;
+			}
+			/*解决方案下拉框尾部右侧*/
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right{
+				color: red;
+				font-size: 14px;
+				float: right;
+			}
+			header>.header_main>nav>.header_nav>li:nth-of-type(3)>.soft_production>.production_footer>.production_footer_contain>.footer_contain_right>span{
+				text-decoration: underline;
+			}
+			/*清除a标签的固定样式*/
+			header>.header_main>nav>.header_nav>li>a{
+				color: black;
+				text-decoration: none;
+			}
+			/*头部主要部分导航栏右侧图片*/
+			header>.header_main>nav>.header_nav_right_logo{
+				position: absolute;
+				top: 10px;
+				right: 162px;
+				text-align: center;
+				cursor: pointer;
+			}
+			header>.header_main>nav>.header_nav_right_logo>img{
+				width: 45px;
+				height: 32px;
+			}
+			header>.header_main>nav>.header_nav_right_logo>p{
+				font-size: 14px;
+			}
+			/*更改类名变白色*/
+			header>.header_main>nav>.header_nav_right_logo>.p_show{
+				color: white;
+			}
+			
+			/*轮播图*/
+			.rotation_chart{
+				min-width: 1500px;
+				width: 100%;
+				height:620px;
+				margin: 100px auto 0px;
+			}
+			.rotation_chart>.cjc_swiper{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			/*轮播图导航点*/
+			.swiper-pagination .swiper-pagination-bullet{
+		    	width: 80px;
+		    	height: 2px;
+		    	border-radius: 0px;
+		    }
+		    .swiper-container-horizontal>.swiper-pagination-bullets{
+		    	bottom: 120px;
+		    }
+		    .swiper-container .swiper-pagination-bullet-active{
+		    	background: white;
+		    }
+		   
+		    .swiper-slide {
+		      text-align: center;
+		      font-size: 18px;
+		      background: white;
+		      /* Center slide text vertically */
+		      display: -webkit-box;
+		      display: -ms-flexbox;
+		      display: -webkit-flex;
+		      display: flex;
+		      -webkit-box-pack: center;
+		      -ms-flex-pack: center;
+		      -webkit-justify-content: center;
+		      justify-content: center;
+		      -webkit-box-align: center;
+		      -ms-flex-align: center;
+		      -webkit-align-items: center;
+		      align-items: center;
+		    }
+		    .rotation_chart>.cjc_swiper>.swiper-wrapper>.cjc_swiper1{
+		    	background: url(img/cjc1_index_banner1.jpg) no-repeat;
+		    	background-size: auto 100%;
+		    	background-position: -200px 0px;
+		    }
+		    .rotation_chart>.cjc_swiper>.swiper-wrapper>.cjc_swiper2{
+		    	background: url(img/cjc2_index_banner2.jpg) no-repeat;
+		    	background-size: auto 100%;
+		    	background-position: -200px 0px;
+		    }
+		    .rotation_chart>.cjc_swiper>.swiper-wrapper>.cjc_swiper3{
+		    	background: url(img/cjc3_index_banner3.jpg) no-repeat;
+		    	background-size: auto 100%;
+		    	background-position: -200px 0px;
+		    }
+		    .rotation_chart>.cjc_swiper>.swiper-wrapper>.cjc_swiper4{
+		    	background: url(img/cjc4_index_banner4.jpg) no-repeat;
+		    	background-size: auto 100%;
+		    	background-position: -200px 0px;
+		    }
+		    /*中间白色区域样式*/
+		    .rotation_footer{
+		    	min-width: 1200px;
+		    	width: 1200px;
+		    	height: 140px;
+		    	margin: -70px auto 0px;
+		    	background: white;
+		    	position: relative;
+		    	z-index: 99;
+		    	padding: 43px 40px 0px 50px;
+		    	border-radius: 10px;
+		    	box-sizing: border-box;
+		    	box-shadow: 0px 10px 10px rgba(0,0,0,0.05);
+		    }
+		    /*每个选项卡的大小样式*/
+		    .rotation_footer>div{
+		    	width: 247px;
+		    	height: 60px;
+		    	padding-left: 64px;
+		    	margin-right: 40px;
+		    	box-sizing: border-box;
+		    	background-size: 44px 54px;
+		    	cursor: pointer;
+		    	float: left;
+		    }
+		    .rotation_footer>div>h4{
+		    	color: #333333;
+		    	font-size: 24px;
+		    	line-height: 1;
+		    	font-weight: 500;
+		    }
+		    .rotation_footer>div>p{
+		    	color: #333333;
+		    	font-size: 14px;
+		    	margin-top: 15px;
+		    }
+		    /*轮播图下方四个选项卡原本的背景图片*/
+		    .rotation_footer>div:nth-of-type(1){
+		    	background: url(img/cjc11_b11.png) no-repeat left center;
+		    }
+		    .rotation_footer>div:nth-of-type(2){
+		    	background: url(img/cjc22_b22.png) no-repeat left center;
+		    }
+		    .rotation_footer>div:nth-of-type(3){
+		    	background: url(img/cjc33_b33.png) no-repeat left center;
+		    }
+		    .rotation_footer>div:nth-of-type(4){
+		    	margin-right: 0px;
+		    	background: url(img/cjc44_b44.png) no-repeat left center;
+		    }
+		    /*移入移出轮播图下方四个选项卡更换类名以达到更换背景图片*/
+		    .rotation_footer>.rot_footer_show:nth-of-type(1){
+		    	background: url(img/cjc1_b1.png) no-repeat left center;
+		    }
+		    .rotation_footer>.rot_footer_show:nth-of-type(2){
+		    	background: url(img/cjc2_b2.png) no-repeat left center;
+		    }
+		    .rotation_footer>.rot_footer_show:nth-of-type(3){
+		    	background: url(img/cjc3_b3.png) no-repeat left center;
+		    }
+		    .rotation_footer>.rot_footer_show:nth-of-type(4){
+		    	background: url(img/cjc4_b4.png) no-repeat left center;
+		    }
+		    /*中间部分选项卡的大盒子*/
+		    .middle{
+		    	min-width: 1500px;
+		    	width: 100%;
+		    	height: 681.2px;
+		    }
+		    .middle>.middle_text{
+		    	width: 1200px;
+		    	height: 221.2px;
+		    	margin: 0px auto;
+		    	text-align: center;
+		    	color: #333333;
+		    }
+		    /*文字内容*/
+		    .middle>.middle_text>h2{
+		    	font-size: 28px;
+		    	padding-top: 60px;
+		    	text-align: center;
+		    	font-weight: 500;
+		    }
+		    .middle>.middle_text>p{
+		    	color: #666666;
+		    	font-weight: lighter;
+		    	font-size: 16px;
+		    	text-align: center;
+		    	margin-top: 20px;
+		    }
+		    /*选项卡的样式*/
+		    .middle>.middle_text>.middle_option{
+		    	width: 1200px;
+		    	height:78px;
+		    	margin: 0px auto;
+		    	position: relative;
+		    }
+		    .middle>.middle_text>.middle_option>ul{
+		    	width: 100%;
+		    	height: 100%;
+		    }
+		    /*每个选项卡的样式*/
+		    .middle>.middle_text>.middle_option>ul>li{
+		    	width: 20%;
+		    	height: 77px;
+		    	font-size: 18px;
+		    	text-align: center;
+		    	line-height: 77px;
+		    	box-sizing: border-box;
+		    	padding-left:32px;
+		    	float: left;
+		    	cursor: pointer;
+		    }
+		    /*选项卡中的背景图片*/
+		    .middle>.middle_text>.middle_option>ul>li:nth-of-type(1){
+		    	background: url(img/cjc11_nav11.png) no-repeat 55px center;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>li:nth-of-type(2){
+		    	background: url(img/div22_nav22.png) no-repeat 55px center;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>li:nth-of-type(3){
+		    	background: url(img/cjc33_nav33.png) no-repeat 55px center;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>li:nth-of-type(4){
+		    	background: url(img/cjc44_nav44.png) no-repeat 55px center;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>li:nth-of-type(5){
+		    	background: url(img/cjc55_nav55.png) no-repeat 55px center;
+		    	background-size: 24px;
+		    }
+		    /*选项卡中的更换类名来更换背景图片*/
+		   	.middle>.middle_text>.middle_option>ul>.md_option_show:nth-of-type(1){
+		    	background: url(img/cjc1_nav1.png) no-repeat 55px center;
+		    	color: #A351A9;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>.md_option_show:nth-of-type(2){
+		    	background: url(img/cjc2_nav2.png) no-repeat 55px center;
+		    	color: #A351A9;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>.md_option_show:nth-of-type(3){
+		    	background: url(img/cjc3_nav3.png) no-repeat 55px center;
+		    	color: #A351A9;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>.md_option_show:nth-of-type(4){
+		    	background: url(img/cjc4_nav4.png) no-repeat 55px center;
+		    	color: #A351A9;
+		    	background-size: 24px;
+		    }
+		    .middle>.middle_text>.middle_option>ul>.md_option_show:nth-of-type(5){
+		    	background: url(img/cjc5_nav5.png) no-repeat 55px center;
+		    	color: #A351A9;
+		    	background-size: 24px;
+		    }
+		   	/*会移动的箭头*/
+		   	.middle>.middle_text>.middle_option>.move_img{
+		   		position: absolute;
+		   		width: 240px;
+		   		height: 10px;
+		   		bottom: -10px;
+		   		z-index: 2;
+		   		transition: linear;
+		   	}
+		   	/*翻页旋转框*/
+		    .middle>.cjc_PlatList{
+		    	width:100%;
+		    	height: 100%;
+		    }
+		    .middle>.cjc_PlatList>div{
+		    	width: 1200px;
+		    	margin: 0px auto;
+		    	height: 460px;
+		    	overflow: hidden;
+		    	position: relative;
+		    }
+		    /*旋转页面上的内容*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1{
+		    	width: 100%;
+		    	height: 100%;
+		    	position: absolute;
+		    	float: left;
+		    	padding-top: 47px;
+		    	/*transition: linear;*/
+		    	transition: 1.6s;
+		    	top: 0px;
+		    	left: 0px;
+		    	background-color: white;
+		    }
+		    /*旋转页面上的左边内容*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_left{
+		    	width: 623px;
+		    	/*height: 295.4px;*/
+		    	padding: 37px 0px 0px 39px;
+				box-sizing: border-box;		
+				float: left;
+				/*background: aqua;*/    	
+		    }
+		    /*旋转页面上的左边内容-文字*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_left>h3{
+		    	font-size: 24px;
+		    	line-height: 32px;
+		    	font-weight: 500;
+		    }
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_left>p{
+		    	font-size: 16px;
+		    	line-height: 27px;
+		    	padding: 20px 0px 26px;
+		    }
+		    /*旋转页面上的左边内容-列表*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_left>.plat_left_list{
+		    	height: 70px;
+		    	padding: 5px 0px;
+		    	box-sizing: border-box;
+		    }
+		   	/*旋转页面里面导航项的公共样式*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_left>.plat_left_list>li{
+		    	width:110px;
+		    	float: left;
+		    	padding-left: 20px;
+		    	background: url(img/cjc_cat.png) no-repeat left center;
+		    	background-size: 10px;
+		    	font-size: 14px;
+		    	line-height: 30px;
+		    	margin-right: 30px;
+		    	box-sizing: border-box;
+		    }
+		    /*把第一个图里面的导航项第三个宽度增加,使得一行排三个*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(1)>.plat_left>.plat_left_list>li:nth-of-type(3){
+		    	width: 135px;
+		    }
+		    /*<立即体验>按钮图片样式(公共部分)*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_left>a{
+		    	display: block;
+		    	width: 144px;
+		    	height: 44px;
+		    	margin-top: 40px;
+		    	background: url(img/cjc_ljty.png) no-repeat center;
+		    	background-size: 100% 100%;
+		    }
+		    /*旋转页面上的右边内容(公共部分)*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_right{
+		    	width: 557px;
+		    	height: 413px;
+		    	float: right;
+		    	position: relative;
+		    }
+		    /*右侧图片的公共部分*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1>.plat_right>img{
+		    	position: absolute;
+		    	top: 0px;
+		    	left: 50%;
+		    	max-width: 100%;
+		    	max-height: 100%;
+		    	transform: translateX(-50%);
+		    }
+		    /*单独给第二个图的li设置宽,使得文字一行排满*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(2)>.plat_left>.plat_left_list>li{
+		    	width: 120px;
+		    }
+		    /*去除第二张图的导航项每行第四个的右边外边距,使得一行排四个*/
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(2)>.plat_left>.plat_left_list>li:nth-of-type(4n){
+		    	margin-right: 0px;
+		    }
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(3)>.plat_left>.plat_left_list>li{
+		    	width: 100%;
+		    }
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(4)>.plat_left>.plat_left_list>li{
+		    	width:135px;
+		    	margin-right: 13px;
+		    }
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(4)>.plat_left>.plat_left_list>li:nth-of-type(4n){
+		    	margin-right: 0px;
+		    }
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(5)>.plat_left>.plat_left_list>li{
+		    	width:120px;
+		    }
+		    .middle>.cjc_PlatList>div>.cjc_PlatList1:nth-of-type(5)>.plat_left>.plat_left_list>li:nth-of-type(4n){
+		    	margin-right: 0px;
+		    }
+		    /*解决方案标题加选项卡*/
+		   	.solution{
+		   		min-width: 1500px;
+		   		width: 100%;
+		   	}
+		   	.solution>.solution_content{
+		   		width: 1200px;
+		   		height: 73px;
+		   		margin: 40px auto;
+		   		background: white;
+		   	}
+		   	/*解决方案标题文字区域*/
+		   	.solution>.solution_content>.solu_cont_title{
+		   		margin-bottom: 45px;
+		   		text-align: center;
+		   	}
+		   	.solution>.solution_content>.solu_cont_title>h2{
+		   		color: #343434;
+		   		font-size: 28px;
+		   		font-weight: 500;
+		   	}
+		   	.solution>.solution_content>.solu_cont_title>p{
+		   		text-align: center;
+		   		color: #868585;
+		   		font-size: 16px;
+		   		font-weight: lighter;
+		   		padding-bottom: 5px;
+		   	}
+		   	/*解决方案标题下的左侧的选项卡*/
+		   	.solution>.solution_option{
+		   		width: 100%;
+		   		margin: 0px auto;
+		   		height: 535px;
+		   		background: url(img/cjc_sld_jjfabg.jpg) no-repeat;
+		   	}
+		   	/*左侧选项卡主要部分*/
+		   	.solution>.solution_option>.sol_opt_box{
+		   		width:1200px;
+		   		height: 535px;
+		   		margin: 0px auto;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list{
+		   		float: left;
+		   		width: 300px;
+		   		padding-right: 58px;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list>ul{
+		   		background: rgba(0,0,0,0.6);
+		   		padding-top: 30px;
+		   	}
+		   	/*左侧选项卡中每个选项*/
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list>ul>li{
+		   		width: 223px;
+		   		padding-left: 77px;
+		   		height: 81px;
+		   		line-height: 56px;
+		   		border-bottom: 1px solid #292929;
+		   		position: relative;
+		   	}
+		   	/*左侧选项卡中每个选项里的img*/
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list>ul>li>img{
+		   		position: absolute;
+		   		left: 20px;
+		   		top: 19px;
+		   	}
+		   	/*左侧选项卡中选项里的文字*/
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list>ul>li>h4{
+		   		height: 24px;
+		   		font-size: 16px;
+		   		color: #FFFFFF;
+		   		font-weight: 500;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list>ul>li>span{
+		   		color: #6f6f6f;
+		   		font-size: 13px;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list>ul>.box_left_list_li_show{
+		   		background: url(img/cjc_ac1.png) no-repeat center;
+		   		background-size:100% 100%;
+		   		cursor: pointer;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_left_list>ul>.box_left_list_li_show>span{
+		   		color:white;
+		   	}
+		   	/*选项卡右侧显示框*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right{
+		   		width:842px;
+		   		height: 458px;
+		   		padding: 48px 0px 28px 0px ;
+		   		float: left;
+		   		position: relative;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show{
+		   		color: white;
+		   		position: absolute;
+		   		top: 34px;
+		   		left: 0px;
+		   	}
+		   	/*选项卡右侧显示框标题文字*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show h3{
+		   		color: white;
+		   		font-size: 20px;
+		   		margin-bottom: 23px;
+		   		font-weight: 500;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>p{
+		   		font-size: 13px;
+		   		color: #cecece;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>p:nth-of-type(2){
+		   		margin-bottom: 43px;
+		   	}
+		   	/*修改第五个显示框中的第二个p的下边外边距*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show:nth-of-type(5) p:nth-of-type(2){
+		   		margin-bottom: 48px;
+		   	}
+		   	/*修改第六个显示框中的第二个p的下边外边距*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show:nth-of-type(6) p:nth-of-type(2){
+		   		margin-bottom: 48px;
+		   	}
+		   	/*选项卡的定义列表*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>dl{
+		   		width: 261px;
+		   		float: left;
+		   		margin-bottom: 37px;
+		   	}
+		   	/*第三个显示框中的dl样式*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show:nth-of-type(3) dl{
+		   		margin-bottom: 15px;
+		   	}
+		   	/*第五个显示框中的dl样式*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show:nth-of-type(5) dl{
+		   		margin-bottom: 3px;
+		   	}
+		   	/*第六个显示框中的dl样式*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show:nth-of-type(6) dl{
+		   		margin-bottom: 3px;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>dl>dt{
+		   		color: white;
+		   		font-size: 13px;
+		   		font-weight: bold;
+		   		margin-bottom: 18px;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>dl>dd{
+		   		height: 17px;
+		   		font-size: 12px;
+		   		padding: 6px 0px;
+		   		color: #888;
+		   	}
+		   	/*修改第四个显示框中的dd的宽度*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show:nth-of-type(4) dl dd{
+		   		width: 266px;
+		   	}
+		   	/*了解详情和获取方案两个框*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>p:nth-of-type(3){
+		   		clear: both;
+		   		height: 40px;
+		   		margin-bottom: 5px;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show a{
+		   		padding: 9px 53px 12px 23px;
+		   		background: url(img/cjc_sld_i26.png) no-repeat;
+		   		color: #FFFFFF;
+		   		text-decoration: none;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show a:nth-of-type(1){
+		   		margin-right: 21px;
+		   	}
+		   	/*右侧框四张图片*/
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>div>img{
+		   		margin-right: 9px;
+		   	}
+		   	.solution>.solution_option>.sol_opt_box>.box_right>.box_right_show>div>img:nth-of-type(4){
+		   		margin-right: 0px;
+		   	}
+		   	/*电商增值业务*/
+		   	.add_value{
+		   		min-width: 1500px;
+		   		width: 100%;
+		   		height: 680px;
+		   		padding-top: 45px;
+		   		overflow: hidden;
+		   	}
+		   	.add_value>.ad_val_cenote{
+		   		width: 1200px;
+		   		margin: 0px auto;
+		   	}
+		   	/*电商增值业务的标题文字*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_title{
+		   		margin-bottom: 63px;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_title>h2{
+		   		text-align: center;
+		   		font-size: 24px;
+		   		line-height: 70px;
+		   		font-weight: 500;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_title>p{
+		   		text-align: center;
+		   		font-size: 16px;
+		   		line-height: 20px;
+		   		color: #6e6e6e;
+		   	}
+		   	/*电商增值业务的主要部分--内容*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main{
+		   		width: 790px;
+		   		height: 508px;
+		   		padding-left: 410px;
+		   		margin: 0px auto;
+		   		background: url(img/cjc_sldzzyw.png) no-repeat;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>ul{
+		   		height: 118px;
+		   		box-sizing: border-box;
+		   		border-bottom: 1px solid #fff;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>ul>li{
+		   		width: 263px;
+		   		height: 117px;
+		   		line-height: 20px;
+		   		float: left;
+		   		text-align: center;
+		   		border-bottom: 1px solid #407ba4;
+		   		cursor: pointer;
+		   	}
+		   	/*更换导航项类名更换背景*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>ul>.ad_val_list{
+		   		background: url(img/cjc_ac2.png) no-repeat;
+		   		background-size:100% 100%;
+		   	}
+		   	/*图片样式*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>ul>li>img{
+		   		margin-top: 30px;
+		   		margin-bottom: 13px;
+		   	}
+		   	/*文字样式*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>ul>li>p{
+		   		font-size: 15px;
+		   		color: #FFFFFF;
+		   	}
+		   	/*与导航栏对应的盒子*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box{
+		   		width: 704px;
+		   		height: 302px;
+		   		padding: 29px 34px 45px 53px;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul{
+		   		height: 118px;
+		   		box-sizing: border-box;
+		   	}
+		   	/*每个硬币效果的样式*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li{
+		   		width: 144px;
+		   		height: 144px;
+		   		float: left;
+		   		text-align: center;
+		   		line-height: 20px;
+		   		overflow: hidden;
+		   		cursor: pointer;
+		   		transition: 0.6s linear;
+		   		margin: 14px 15px;
+		   		border: 1px solid transparent;
+		   	}
+		   	/*每个圆形*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li>.adcm_box_ico{
+		   		width: 144px;
+		   		height: 144px;
+		   		transition: 0.6s linear;
+		   	}
+		   	/*圆形里面的图片*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li>.adcm_box_ico>img{
+		   		margin-top: 30px;
+		   		margin-bottom: 13px;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li>.adcm_box_ico>p{
+		   		font-size: 15px;
+		   		color: #FFFFFF;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li>.adcm_box_coin{
+		   		transform: scale(0,1);
+		   		width:103px;
+		   		height: 103px;
+		   		transition: 0.6s linear;
+		   		padding: 17px 18px;
+		   		border-radius: 50%;
+		   		background: #FFFFFF;
+		   		text-align: center;
+		   		margin: 4px 0px 0px 2.5px;
+		   		font-size: 12px;
+		   		overflow: hidden;	
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li>.adcm_box_coin>h3{
+		   		font-size: 16px;
+		   		color: #407da6;
+		   		margin-bottom: 13px;
+		   		font-weight: 500;
+		   	}
+		   	/*移入图标,出现硬币旋转效果*/
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li:hover{
+		   		border: 1px solid white;
+		   		border-radius: 50%;
+		   		background: url(img/cjc_ac2.png) no-repeat;
+		   		background-size:100% 100% ;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li:hover>.adcm_box_ico{
+		   		display: none;
+		   	}
+		   	.add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box>ul>li:hover>.adcm_box_coin{
+		   		transform: scale(1,1);
+		   	}
+		   	/*成功客户案例*/
+		   	.success{
+		   		min-width: 1500px;
+		   		width: 100%;
+		   		background: #FFFFFF;
+		   		overflow: hidden;
+		   	}
+		   	.success>.success_case{
+		   		width: 1220px;
+		   		padding-left: 32px;
+		   		padding-bottom: 58px;
+		   		margin: 0px auto;
+		   	}
+		   	/*成功客户案例标题文字样式*/
+		   	.success>.success_case>.success_case_title>h2{
+		   		font-size: 28px;
+		   		text-align: center;
+		   		color: #343434;
+		   		padding: 40px 0px 0px ;
+		   		line-height: 1;
+		   		font-weight: 500;
+		   	}
+		   	.success>.success_case>.success_case_title>p{
+		   		font-size: 16px;
+		   		color: #868585;
+		   		text-align: center;
+		   		margin: 15px 0px 25px;
+		   	}
+		   	/*清除浮动影响*/
+		   	.success>.success_case>ul:after{
+		   		content: "";
+		   		height: 0px;
+		   		display: block;
+		   		clear: both;
+		   	}
+		   	/*成功客户案例的每个选项的样式*/
+		   	.success>.success_case>ul>li{
+		   		width: 220px;
+		   		height: 88px;
+		   		float: left;
+		   		margin: 0px 10px 20px;
+		   		cursor: pointer;
+		   	}
+		   	/*移入让选项出现阴影*/
+		   	.success>.success_case>ul>li:hover{
+		   		box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+		   	}
+		   	/*更多按钮的样式*/
+		   	.success>.success_case>.success_case_more{
+		   		width: 128px;
+		   		height: 32px;
+		   		line-height: 30px;
+		   		text-align: center;
+		   		margin: 0px auto;
+		   		font-family: simsun;
+		   		font-size: 14px;
+		   		border-radius: 4px;
+		   		border: 1px solid #CCCCCC;
+		   		color: #999999;
+		   		cursor: pointer;
+		   	}
+		   	/*移入更多按钮变蓝*/
+		   	.success>.success_case>.success_case_more:hover{
+		   		background: blue;
+		   		color: white;
+		   	}
+		   	/*时间数值*/
+		   	.timing{
+		   		min-width: 1500px;
+		   		width: 100%;
+		   		height: 180px;
+		   		background: url(img/cjc_nbg.png) no-repeat center;
+		   		background-size: 100% 100%;
+		   	}
+		   	.timing>.timing_container{
+		   		width: 1200px;
+		   		height: 100%;
+		   		margin: 0px auto;
+		   	}
+		   	.timing>.timing_container>li{
+		   		width: 25%;
+		   		font-size: 14px;
+		   		color: #FFFFFF;
+		   		padding-left: 90px;
+		   		padding-top: 40px;
+		   		float: left;
+		   		box-sizing: border-box;
+		   	}
+		   	.timing>.timing_container>li>.njscd,.timing>.timing_container>li>.zyjstd,.timing>.timing_container>li>.qykhxz,.timing>.timing_container>li>.shzc{
+		   		font-size: 32px;
+		   		font-weight: bold;
+		   		line-height: 40px;
+		   		margin: 0px auto;
+		   		position: relative;
+		   	}
+		   	.timing>.timing_container>li>.njscd>span{
+		   		transition: linear 1s;
+		   	}
+		   	.timing>.timing_container>li em{
+		   		display: inline-block;
+		   		font-size: 24px;
+		   		transform: translateY(-20px);
+		   	}
+		   	.timing>.timing_container .line{
+		   		display: block;
+		   		width: 24px;
+		   		height: 4px;
+		   		background: #FFFFFF;
+		   		margin: 16px 0px;
+		   	}
+		   	/*新闻资讯*/
+		   	.news{
+		   		min-width: 1500px;
+		   		height: 819px;
+		   	}
+		   	.news>.news_title{
+		   		width: 1200px;
+		   		padding-top: 72px;
+		   		margin: 0px auto;
+		   		text-align: center;
+		   	}
+		   	.news>.news_title>h1{
+		   		font-size: 28px;
+		   		color: #343434;
+		   		margin-bottom: 19px;
+		   		font-weight: 500;
+		   	}
+		   	.news>.news_title>p{
+		   		color: #868585;
+		   		font-size: 16px;
+		   		margin-bottom: 40px;
+		   	}
+		   	/*新闻咨询每个图片区*/
+		   	.news>.news_title ul li{
+		   		width: 350px;
+		   		margin-right: 74px;
+		   		text-align: left;
+		   		float: left;
+		   		cursor: pointer;
+		   	}
+		   	/*清除第三个图片的右边外边距*/
+		   	.news>.news_title ul li:nth-of-type(3){
+		   		margin-right: 0px;
+		   	}
+		   	/*每个图片的标题*/
+		   	.news>.news_title ul li h2{
+		   		margin-bottom: 27px;
+		   		font-size: 18px;
+		   		color: #343434;
+		   		text-align: left;
+		   	}
+		   	/*标题上的蓝色一杠*/
+		   	.news>.news_title ul li h2 ins{
+		   		width: 4px;
+		   		height: 13px;
+		   		display: inline-block;
+		   		background: #2893FF;
+		   		margin-left: 15px;
+		   	}
+		   	/*文字部分*/
+		   	.news>.news_title ul li dl{
+		   		position: relative;
+		   		margin-bottom:8px;
+		   		height: 247px;
+		   		overflow: hidden;
+		   	}
+		   	.news>.news_title ul li dl dd{
+		   		font-size: 14px;
+		   		height: 34px;
+		   		text-align: left;
+		   		position: absolute;
+		   		left: 0px;
+		   		bottom: 0px;
+		   		padding: 13px 24px 15px 18px;
+		   		color: white;
+		   		background: rgba(0,0,0,0.3);
+		   	}
+		   	/*图片过渡样式*/
+		   	.news>.news_title ul li dl dt img{
+		   		transition: all 0.8s linear;
+		   		transform: scale(1);
+		   	}
+		   	/*移入图片放大*/
+		   	.news>.news_title ul li dl dt:hover>img{
+		   		transform: scale(1.3);
+		   	}
+		   	.news>.news_title ul li p{
+		   		color: #1A1A1A;
+		   		padding: 8px 0px;
+		   		white-space: nowrap;
+		   		text-overflow: ellipsis;
+		   		overflow: hidden;
+		   	}
+		   	/*查看更多按钮*/
+		   	.news>.news_title ul li>a{
+		   		width: 100px;
+		   		height: 28px;
+		   		display: inline-block;
+		   		border: 1px solid #A0A0A0;
+		   		color: #A0A0A0;
+		   		font-size: 14px;
+		   		text-align: center;
+		   		line-height: 28px;
+		   		margin-top: 5px;
+		   		text-decoration: none;
+		   	}
+		   	/*移入查看更多按钮变样式*/
+		   	.news>.news_title ul li>a:hover{
+		   		border: 1px solid #3baaf1;
+		   		color: #3baaf1;
+		   	}
+		   	/*更多动态按钮*/
+		   	.news>.news_title>div{
+		   		clear:both;
+		   		padding-top:  63px;
+		   		text-align: center;
+		   	}
+		   	.news>.news_title>div>a{
+		   		width: 135px;
+		   		height: 36px;
+		   		display: inline-block;
+		   		border-radius: 5px;
+		   		background: #096FFF;
+		   		color: #FFFFFF;
+		   		font-family: simsun;
+		   		line-height: 36px;
+		   		text-decoration: none;
+		   		transition: linear;
+		   	}
+			/*移入出现动画效果*/		   	
+		   	.news>.news_title>div>a:hover{
+		   		background: white;
+		   		color: black;
+		   		animation: infinity 1s infinite linear;
+		   	}
+		   	/*定义移入更多动态按钮的动画效果*/
+		   	@keyframes infinity{
+		   		from{
+		   			background: white;
+		   			box-shadow: 0px 0px 15px rgb(150,252,250);
+		   		}
+		   		to{
+		   			background: white;
+		   			box-shadow:0px 0px 15px 4px rgb(150,252,250);
+		   		}
+		   	}
+		   	/*开启电商业务*/
+		   	.footer{
+		   		min-width: 1500px;
+		   		width: 100%;
+		   		overflow: hidden;
+		   		background: #f2f3f8;
+		   	}
+		   	.footer>.open{
+		   		height: 210px;
+		   		margin: auto;
+		   		overflow: hidden;
+		   		text-align: center;
+		   		position: relative;
+		   		background: url(img/cjc_background2.png) center no-repeat;
+		   		background-size: 100% 100%;
+		   	}
+		   	/*开启电商业务标题*/
+		   	.footer>.open>h2{
+		   		color: #FFFFFF;
+		   		text-align: center;
+		   		font-size: 32px;
+		   		line-height: 80px;
+		   		margin-top: 20px;
+		   		font-weight: 500;
+		   	}
+		   	/*立即体验*/
+		   	.footer>.open>.open_btn>.open_btn_show{
+		   		width: 214px;
+		   		height: 48px;
+		   		color: #FFFFFF;
+		   		display: inline-block;
+		   		line-height: 46px;
+		   		text-align: center;
+		   		border-radius: 10px;
+		   		background: transparent;
+		   		font-size: 24px;
+		   		border: 1px solid #FFFFFF;
+		   		margin-top: 20px;
+		   		text-decoration: none;
+		   	}
+		   	/*尾部*/
+		   	.footer_box{
+		   		min-width: 1500px;
+		   		width: 100%;
+		   		height: 358px;
+		   		box-sizing: border-box;
+		   		padding-top: 37px;
+		   		color: #FFFFFF;
+		   		font-size: 12px;
+		   		background: #06141e;
+		   	}
+		   	.footer_box>.footer_box_contain{
+		   		width: 1220px;
+		   		margin: 0px auto;
+		   		padding-left: 32px;
+		   	}
+		   	/*尾部上部*/
+		   	.footer_box>.footer_box_contain>.footer_box_top{
+		   		height: 200px;
+		   	}
+			/*尾部上部分左侧电话栏*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel{
+		   		float: left;
+		   		width: 295px;
+		   	}
+		   	/*尾部上部分左侧电话栏上部分*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_top{
+		   		margin-bottom: 25px;
+		   	}/*尾部上部分左侧电话栏上部分里的图标*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_top i{
+		   		width: 40px;
+		   		height: 40px;
+		   		background: url(img/cjc_kefu.png) no-repeat;
+		   		background-size: 100% 100%;
+		   		float: left;
+		   		font-style: normal;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_top>div{
+		   		padding-left: 50px;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_top>div>p:nth-of-type(1){
+		   		font-size: 14px;
+		   		line-height: 16px;
+		   		margin-bottom: 10px;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_top>div>p:nth-of-type(2){
+		   		font-size: 28px;
+		   	}
+		   	/*尾部上部分左侧电话栏下部分*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_bottom{
+		   		height: 78px;
+		   	}
+		   	/*尾部上部分左侧电话栏下部分图标*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_bottom i{
+		   		width: 34px;
+		   		height: 41px;
+		   		float: left;
+		   		font-style: normal;
+		   		background: url(img/cjc_bh.png) no-repeat;
+		   		background-size: 100% 100%;
+		   		margin-top: 12px;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_bottom>div{
+		   		padding-left: 50px;
+		   	}
+		   	/*尾部上部分左侧电话栏下部分的虚线*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_bottom>div>.f_b_top_tel_bottom_line{
+		   		padding-left: 50px;
+		   		padding-left: 10px;
+		   		border-left: 1px dashed rgba(255,255,255,0.1);
+		   	}
+		   	/*尾部上部分左侧电话栏下部分文字样式*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_bottom p{
+		   		line-height: 18px;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_tel>.f_b_top_tel_bottom p:nth-of-type(2n-1){
+		   		margin-bottom: 4px;
+		   	}
+		   	/*尾部上部分右侧导航栏*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav{
+		   		float: left;
+		   		border-left: 1px solid rgba(255,255,255,0.1);
+		   	}
+		   	/*尾部上部分右侧导航栏每个定义列表*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav>dl{
+		   		float: left;
+		   		padding-left: 78px;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav dd{
+		   		line-height: 26px;
+		   		font-size: 12px;
+		   		color: rgba(255,255,255,0.6);
+		   		cursor: pointer;
+		   	}
+		   	/*移入文字dd项增加下划线*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav dd:hover{
+		   		text-decoration: underline;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav dt{
+		   		font-size: 18px;
+		   		margin-bottom: 20px;
+		   	}
+		   	/*尾部上部分右侧导航栏的图片二维码*/
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav>.right_erweima>dt{
+		   		text-align: center;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav>.right_erweima>dd{
+		   		width: 101px;
+		   		height: 134px;
+		   		padding: 2px;
+		   		text-align:center;
+		   		background: #FFFFFF;
+		   		box-sizing: border-box;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav>.right_erweima>dd>img{
+		   		width: 97px;
+		   		height: 97px;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_top>.f_b_top_nav>.right_erweima>dd>span{
+		   		height: 24px;
+		   		font-size: 12px;
+		   		line-height: 24px;
+		   		display: block;
+		   		color: white;
+		   		background: #000000;
+		   	}
+		   	/*尾部下部分*/
+		   	.footer_box>.footer_box_contain>.footer_box_bottom{
+		   		padding-left: 17px;
+		   	}
+		   	/*清除浮动影响*/
+		   	.footer_box>.footer_box_contain>.footer_box_bottom:after{
+		   		content"";
+		   		display: block;
+		   		height: 0px;
+		   		clear: both;
+		   	}
+		   	/*尾部下部分的地址栏样式*/ 
+		   	.footer_box>.footer_box_contain>.footer_box_bottom>.f_b_bottom_address{
+		   		padding: 25px 0px 38px;
+		   		line-height: 16px;
+		   		border-top: 1px dashed rgba(255,255,255,0.1);
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_bottom>.f_b_bottom_address>span{
+		   		display: inline-block;
+		   		padding-left: 28px;
+		   		background: url(img/cjc_dizhi_06.png) no-repeat 15px center;
+		   		background-size: 9px 11px;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_bottom>.f_b_bottom_text{
+		   		color: #656565;
+		   		text-align: center;
+		   	}
+		   	.footer_box>.footer_box_contain>.footer_box_bottom>.f_b_bottom_text>a{
+		   		font-size: 12px;
+		   		color: #c5c6c4;
+		   		text-decoration: none;
+		   	}
+		</style>
+	</head>
+	<body>
+			<!--头部顶部-->
+			<div class="header_top">
+				<!--头部顶部右边导航栏-->
+				<div class="header_top_right">
+					<a href="#">服务</a>
+					<span>|</span>
+					<a href="#">上海公司</a>
+					<span>|</span>
+					<a href="#">北京公司</a>
+					<span>|</span>
+					<a href="#">广州公司</a>
+					<a href="#">全国统一热线 400-881-0877</a>
+				</div>
+			</div>
+			<!--头部-->
+			<header>
+				<!--头部主要部分-->
+				<div class="header_main">
+					<!--头部左侧logo-->
+					<div class="header_logo">
+						<img src="img/cjc1_sldlogo.png" class="img_left_show"/>
+					</div>
+					<!--头部中部导航栏-->
+					<nav>
+						<ul class="header_nav">
+							<li><a href="index.html">首页</a></li>
+							<li><a href="#">软件产品</a>
+								<!--软件产品的下拉框-->
+								<div class="soft_production">
+									<!--软件产品下拉框的主要部分-->
+									<div class="soft_production_main">
+										<!--软件产品下拉框的左侧部分-->
+										<div class="soft_production_main_left">
+											<ul class="main_left_list">
+												<!--每个选项-->
+												<li>
+													<a href="html/B2B2C多用户商城系统.html" target="_blank">
+														<img src="img/cjc1_list1.png"/>
+														<div class="text_content">
+															<h3>B2B2C多用户商城系统
+																<em>HOT</em>
+															</h3>
+															<p>类似天猫或京东的商城平台，支持自营和商家入驻，支持O2O</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/国际商城系统.html" target="_blank">
+														<img src="img/cjc2_list2.png"/>
+														<div class="text_content">
+															<h3>英文版商城系统
+																<em>NEW</em>
+															</h3>
+															<p>国际版商城系统，适合跨境出口、国外独立运营及多语种电商</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc3_list3.png"/>
+														<div class="text_content">
+															<h3>直播+短视频电商系统
+																<em>HOT</em>
+															</h3>
+															<p>融合直播+社交短视频+电商购物于一体的商城系统</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/B2C自营商城系统.html" target="_blank">
+														<img src="img/cjc4_list4.png"/>
+														<div class="text_content">
+															<h3>B2C自营商城系统</h3>
+															<p>快速搭建多终端在线零售官方商城，打通会员、积累客户，支持o2o</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/cjc5_list5.png"/>
+														<div class="text_content">
+															<h3>全渠道新零售系统</h3>
+															<p>新零售的核心在于线上线下的结合，商联达新零售系统包含商</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc6_list6.png"/>
+														<div class="text_content">
+															<h3>APP商城系统</h3>
+															<p>覆盖IOS&Android双平台的原生app,系统功能全面，开源发售</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/B2B批发商城系统.html" target="_blank">
+														<img src="img/cjc7_list7.png"/>
+														<div class="text_content">
+															<h3>B2B批发商城系统</h3>
+															<p>能同时支持在线批发、订货、零售、分销的电商平台系统</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/知识付费系统.html" >
+														<img src="img/cjc8_list8.png"/>
+														<div class="text_content">
+															<h3>知识付费系统</h3>
+															<p>支持直播/图文/音频/社群等多种内容付费模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/cjc9_list9.png"/>
+														<div class="text_content">
+															<h3>微信商城系统</h3>
+															<p>超会卖货的移动微商城支持多种分销模式，快速提升业务收入</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/联到O2O商城系统.html">
+														<img src="img/cjc10_list10.png"/>
+														<div class="text_content">
+															<h3>O2O商城系统
+																<em>HOT</em>
+															</h3>
+															<p>适应同城电商,京东到家,社区新零售等多种O2O业务模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc11_list11.png"/>
+														<div class="text_content">
+															<h3>电商平台个性化定制</h3>
+															<p>您的业务很独特，商联达为您在标准版基础上定制开发，大大缩短</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/cjc12_list12.png"/>
+														<div class="text_content">
+															<h3>小程序商城系统</h3>
+															<p>全面打通微信及支付宝2大小程序，统一装修，数据同步</p>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<!--软件产品下拉框的右侧部分-->
+										<div class="soft_production_main_right">
+											<h3>全终端覆盖</h3>
+											<ul>
+												<li><img src="img/cjc17_list17.png"/></li>
+												<li><img src="img/cjc19_list19.png"/></li>
+												<li><img src="img/cjc15_list15.png"/></li>
+												<li><img src="img/cjc14_list14.png"/></li>
+												<li><img src="img/cjc13_list13.png"/></li>
+												<li><img src="img/cjc16_list16.png"/></li>
+											</ul>
+											<h3>多种语言可选</h3>
+											<p>拥有PHP及JAVA两种语言版本的商城系统</p>
+											<div>
+												<img src="img/cjc18_list18.png"/>
+											</div>
+										</div>
+									</div>
+									<!--下拉框的尾部部分-->
+									<div class="production_footer">
+										<div class="production_footer_contain">
+											<div class="footer_contain_left">
+												<dl>
+													<dt style="color: #999;">电商配套系统:</dt>
+													<dd>电商收银系统</dd>
+													<dd style="color: red;">骑手配送系统</dd>
+													<dd>电商erp系统</dd>
+													<dd>系统对接</dd>
+												</dl>
+											</div>
+											<div class="footer_contain_right">
+												<span>全国统一服务热线：</span>400-881-0877
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">解决方案</a>
+								<!--解决方案的下拉框-->
+								<div class="soft_production">
+									<!--解决方案下拉框的主要部分-->
+									<div class="soft_production_main">
+										<!--解决方案下拉框的左侧部分-->
+										<div class="soft_production_main_left">
+											<ul class="main_left_list">
+												<!--每个选项-->
+												<li>
+													<a href="html/新零售.html" target="_blank">
+														<img src="img/cjc_1list1.png"/>
+														<div class="text_content">
+															<h3>新零售电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>线上线下深度融合</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/国际.html" target="_blank">
+														<img src="img/cjc_2list2.png"/>
+														<div class="text_content">
+															<h3>国际电商解决方案</h3>
+															<p>多语种支持</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/生鲜.html" target="_blank">
+														<img src="img/cjc3_list3.png"/>
+														<div class="text_content">
+															<h3>生鲜电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>帮助生鲜商家快速布局线上</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="html/O2O解决方案.html" >
+														<img src="img/cjc4_list4.png"/>
+														<div class="text_content">
+															<h3>O2O电商解决方案</h3>
+															<p>适应多种O2O业务模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc5_list5.png"/>
+														<div class="text_content">
+															<h3>百货商场电商解决方案</h3>
+															<p>线上线下资源整合</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc6_list6.png"/>
+														<div class="text_content">
+															<h3>医药电商解决方案</h3>
+															<p>助力医药行业开启线上业务</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc7_list7.png"/>
+														<div class="text_content">
+															<h3>视频电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>直播短视频+电商新模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/cjc8_list8.png"/>
+														<div class="text_content">
+															<h3>B2B平台解决方案</h3>
+															<p>大宗交易电商平台</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc9_list9.png"/>
+														<div class="text_content">
+															<h3>企业采购电商解决方案</h3>
+															<p>用数字和链接让企业采购更简单</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc_10list10.png"/>
+														<div class="text_content">
+															<h3>跨境电商解决方案</h3>
+															<p>进口出口电商平台开发</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="img/cjc_11list11.png"/>
+														<div class="text_content">
+															<h3>分销电商解决方案</h3>
+															<p>专属分销模式定制</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/cjc12_list12.png"/>
+														<div class="text_content">
+															<h3>农村扶贫电商解决方案</h3>
+															<p>双向流农村电商平台</p>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<!--解决方案的右侧部分-->
+										<div class="soft_production_main_right">
+											<h3>全终端覆盖</h3>
+											<ul>
+												<li><img src="img/cjc17_list17.png"/></li>
+												<li><img src="img/cjc19_list19.png"/></li>
+												<li><img src="img/cjc15_list15.png"/></li>
+												<li><img src="img/cjc14_list14.png"/></li>
+												<li><img src="img/cjc13_list13.png"/></li>
+												<li><img src="img/cjc16_list16.png"/></li>
+											</ul>
+											<h3>配套软件推荐</h3>
+											<div>
+												<div>多用户商城系统</div>
+												<div>直播电商系统</div>
+												<div>骑手配送系统</div>
+												<div>电商收银系统</div>
+												<div>O2O商城系统</div>
+												<div>B2C商城系统</div>
+											</div>
+										</div>
+									</div>
+									<!--下拉框的尾部部分-->
+									<div class="production_footer">
+										<div class="production_footer_contain">
+											<div class="footer_contain_left">
+												<dl>
+													<dt style="color: #999;">定制解决方案:</dt>
+													<dd>区块链+积分商城解决方案</dd>
+													<dd>区块链+商品溯源解决方案</dd>
+													<dd style="color: red;">更多解决方案</dd>
+												</dl>
+											</div>
+											<div class="footer_contain_right">
+												<span>全国统一服务热线：</span>400-881-0877
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">电商代运营</a></li>
+							<li><a href="html/客户案列.html" target="_blank">客户案例</a></li>
+							<li><a href="html/电商学院.html" target="_blank">电商学院</a></li>
+							<li><a href="html/关于我们.html" target="_blank">关于我们</a></li>
+						</ul>
+						<!--导航栏右侧logo-->
+						<div class="header_nav_right_logo">
+							<img src="img/cjc2_ckys.png" class="img_right_show"/>
+							<p>查看演示</p>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<!--轮播图-->
+			<div class="rotation_chart">
+				<div class="swiper-container cjc_swiper">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide cjc_swiper1"></div>
+				      <div class="swiper-slide cjc_swiper2"></div>
+				      <div class="swiper-slide cjc_swiper3"></div>
+				      <div class="swiper-slide cjc_swiper4"></div>
+				    </div>
+				    <!-- Add Pagination -->
+				    <div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<!--紧接着轮播图下的选项卡-->
+			<div class="rotation_footer">
+				<div>
+					<h4>PHP&JAVA技术</h4>
+					<p>2种语言满足多样化需求</p>
+				</div>
+				<div>
+					<h4>全渠道融合</h4>
+					<p>线上线下全端覆盖</p>
+				</div>
+				<div>
+					<h4>一站式服务</h4>
+					<p>商城开发+运营全程托管</p>
+				</div>
+				<div>
+					<h4>多业务模式</h4>
+					<p>B2B2C/B2C/B2B/O2O...</p>
+				</div>
+			</div>
+			<div class="middle">
+				<!--中部文字部分-->
+				<div class="middle_text">
+					<h2>全渠道+全场景电商生态系统与服务提供商</h2>
+					<p>平台电商、移动分销、小程序、企业商城、新零售、直播电商、区块链...您的电商需求，商联达帮您实现</p>
+					<!--中部选项卡-->
+					<div class="middle_option">
+						<ul>
+							<li>全渠道互通</li>
+							<li>多业务模式</li>
+							<li>多语言支持</li>
+							<li>开放式对接</li>
+							<li>全场景营销</li>
+						</ul>
+						<!--移动箭头-->
+						<div class="move_img" style="left：0px">
+							<img src="img/cjc1_jiantou.png"/>
+						</div>
+					</div>
+				</div>
+				<!--旋转图-->
+				<div class="cjc_PlatList" >
+					<div>
+						<!--第一个旋转图-->
+						<div class="cjc_PlatList1" style="transform: rotateY(0deg);">
+							<div class="plat_left">
+								<h3>强大的促销模块让商家商品不愁卖</h3>
+								<p>丰富的营销解决方案支持,让系统更易运营</p>
+								<ul class="plat_left_list">
+									<li>PC电脑端</li>
+									<li>手机APP端</li>
+									<li>H5微信端</li>
+									<li>微信小程序</li>
+									<li>支付宝小程序</li>
+									<li>智能设备</li>
+								</ul>
+								<a href="#"></a>
+							</div>
+							<div class="plat_right">
+								<img src="img/cjc_nav6.png" alt="" />
+							</div>
+						</div>
+						<!--第二个旋转图-->
+						<div class="cjc_PlatList1" style="transform: rotateY(90deg);">
+							<div class="plat_left">
+								<h3>多场景多业务模式系统支持</h3>
+								<p>商联达在电子商务软件和互联网技术领域经验资深,历经多年市场实践已研发出具有自主知识产权的多套电商软件系统</p>
+								<ul class="plat_left_list">
+									<li>B2B2C商城系统</li>
+									<li>B2C商城系统</li>
+									<li>B2B商城系统</li>
+									<li>O2O商城系统</li>
+									<li>多视频电商系统</li>
+									<li>骑手配送系统</li>
+									<li>收银系统</li>
+									<li>多语言商城系统</li>
+								</ul>
+								<a href="#"></a>
+							</div>
+							<div class="plat_right">
+								<img src="img/cjc_nav7.png" alt="" />
+							</div>
+						</div>
+						<!--第三个旋转图-->
+						<div class="cjc_PlatList1" style="transform: rotateY(90deg);">
+							<div class="plat_left">
+								<h3>多种开发语言满足多样化需求</h3>
+								<p>商联达拥有PHP和JAVA两种主流开发语言的研发和项目团队,可以满足企业对不同开发语言的需求!</p>
+								<ul class="plat_left_list">
+									<li>PHP+MySQL开源商城系统支持二开</li>
+									<li>JAVA版全开源商城系统,源码授权</li>
+								</ul>
+								<a href="#"></a>
+							</div>
+							<div class="plat_right">
+								<img src="img/cjc_nav8.png" alt="" />
+							</div>
+						</div>
+						<!--第四个旋转图-->
+						<div class="cjc_PlatList1" style="transform: rotateY(90deg);" >
+							<div class="plat_left">
+								<h3>无缝对接内部系统</h3>
+								<p>开放借口,支持二次开发,保障客户数据安全,实现客户信息同步显示</p>
+								<ul class="plat_left_list">
+									<li>CRM系统对接</li>
+									<li>ERP系统对接</li>
+									<li>物流系统对接</li>
+									<li>三方支付系统对接</li>
+									<li>海关对接</li>
+									<li>会员系统对接</li>
+									<li>OA系统对接</li>
+									<li>更多企业系统对接</li>
+								</ul>
+								<a href="#"></a>
+							</div>
+							<div class="plat_right">
+								<img src="img/cjc_nav9.png" alt="" />
+							</div>
+						</div>
+						<!--第五个旋转图-->
+						<div class="cjc_PlatList1" style="transform: rotateY(90deg);">
+							<div class="plat_left">
+								<h3>强大的促销模块让商家商品不愁卖</h3>
+								<p>丰富的营销解决方案支持，让系统更易运营。</p>
+								<ul class="plat_left_list">
+									<li>短视频营销</li>
+									<li>拼团/阶梯团</li>
+									<li>预售</li>
+									<li>限时折扣</li>
+									<li>团购/优惠套装</li>
+									<li>满即送/优惠券</li>
+									<li>移动专享</li>
+									<li>积分兑换</li>
+								</ul>
+								<a href="#"></a>
+							</div>
+							<div class="plat_right">
+								<img src="img/cjc_nav10.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--热门电商解决方案标题-->
+			<div class="solution">
+				<div class="solution_content">
+					<div class="solu_cont_title">
+						<h2>热门电商解决方案</h2>
+						<p>专业全面，10年电商服务经验，我们懂你的真正需求</p>
+					</div>
+				</div>
+				<!--热门电商解决方案标题下选项卡-->
+				<div class="solution_option">
+					<div class="sol_opt_box">
+						<div class="box_left_list">
+							<ul>
+								<li class="box_left_list_li_show">
+									<img src="img/cjc_tab3.png"/>
+									<h4>新零售时代快人一步</h4>
+									<span>新零售时代快人一步</span>
+								</li>
+								<li>
+									<img src="img/cjc_tab6.png"/>
+									<h4>O2O门店解决方案</h4>
+									<span>线上线下双店模式</span>
+								</li>
+								<li>
+									<img src="img/cjc_tab4.png"/>
+									<h4>跨境电商解决方案</h4>
+									<span>成熟跨进商城系统</span>
+								</li>
+								<li>
+									<img src="img/cjc_tab5.png"/>
+									<h4>农村电商解决方案</h4>
+									<span>摆脱农村电商布局之困</span>
+								</li>
+								<li>
+									<img src="img/cjc_tab1.png"/>
+									<h4>零售商超电商解决方案</h4>
+									<span>多点布局全渠道覆盖</span>
+								</li>
+								<li>
+									<img src="img/cjc_tab2.png"/>
+									<h4>官方商城解决方案</h4>
+									<span>自建商城独立引流</span>
+								</li>
+							</ul>
+						</div>
+						<!--根据左侧选项卡而显示的右侧显示框-->
+						<div class="box_right" >
+							<!--第一个显示框-->
+							<div class="box_right_show" style="display: block;">
+								<h3>全渠道零售解决方案</h3>
+								<p>新零售的核心在于线上线下和配送的结合,商联达新零售商城解决方案包含电商平台</p>
+								<p>线上下单,线下服务 · 线上发券,线下核销 · 线下缺货,线上代发 · 线下购</p>
+								<dl>
+									<dt>精细化运营</dt>
+									<dd>1.打破空间局限,提高门店坪效;</dd>
+									<dd>2.告别混乱管理,打通进销存;</dd>
+									<dd>3.用数据驱动门店管理</dd>
+								</dl>
+								<dl>
+									<dt>高效管理</dt>
+									<dd>1.全方位采集消费者数据;</dd>
+									<dd>2.线上线下一套会员数据;</dd>
+									<dd>3.精细化管理会员;</dd>
+								</dl>
+								<dl>
+									<dt>全渠道体系</dt>
+									<dd>1.为客户输出整体方案;</dd>
+									<dd>2.电脑移动全终端覆盖;</dd>
+									<dd>3.兼容加盟、直营多套体系;</dd>
+								</dl>
+								<p>
+									<a href="#">了解详情</a>
+									<a href="#">获取方案</a>
+								</p>
+								<h3>相关案例</h3>
+								<div>
+									<img src="img/cjc1_fniu.png" alt="" />
+									<img src="img/cjc2_gxm.png" alt="" />
+									<img src="img/cjc3_yg.png" alt="" />
+									<img src="img/cjc4_sx.png" alt="" />
+								</div>
+							</div>
+							<!--第二个显示框-->
+							<div class="box_right_show" style="display: none;">
+								<h3>O2O门店解决方案</h3>
+								<p>"以线下实体门店为核心,打通品牌的线上线下渠道,解决复杂的网店搭建、客情维护、营销策划、进销存管理等,让连锁门店运营管理更高效!"</p>
+								<p>门店地址 地图导航· 门店抢单 订单指派· 线上下单 到店自提</p>
+								<dl>
+									<dt>合作加盟模式</dt>
+									<dd>商家拥有多家合作加盟店，根据用户</dd>
+									<dd>的位置将用户匹配到最合适的门店，</dd>
+									<dd>由该门店为用户提供相应的服务。</dd>
+								</dl>
+								<dl>
+									<dt>连锁直营模式</dt>
+									<dd>商家总部和门店都有发货能力，线</dd>
+									<dd>上平台是一个相对中心化的流量入口，</dd>
+									<dd>由平台将流量分发到各个门店中。</dd>
+								</dl>
+								<dl>
+									<dt>同城区域模式</dt>
+									<dd>商家是做同城或区域电商的，每家</dd>
+									<dd>合作门店相对独立或者经营多品类，</dd>
+									<dd>按距离远近向用户展示最近的门店。</dd>
+								</dl>
+								<p>
+									<a href="#">了解详情</a>
+									<a href="#">获取方案</a>
+								</p>
+								<h3>相关案例</h3>
+								<div>
+									<img src="img/cjc_sld_i_03.png" alt="" />
+									<img src="img/cjc_sld_i_06.png" alt="" />
+									<img src="img/cjc_sld_i_08.png" alt="" />
+									<img src="img/cjc_sld_i_10.png" alt="" />
+								</div>
+							</div>
+							<!--第三个显示框-->
+							<div class="box_right_show" style="display: none;">
+								<h3>跨境电商解决方案</h3>
+								<p>专注解决跨境电商企业的清关效率低下、库存管理、分销发展吃力、信用问题凸显和政策支持困境</p>
+								<p>· 一招解决5大困境 · 3大主流化运营模式 · 订单同步海关系统 · 高效率业务流程 · …</p>
+								<dl>
+									<dt>B2B2C平台模式 <br>（自营+入驻）</dt>
+									<dd>控制品质，同时吸纳优质供应商弥</dd>
+									<dd>补货源品类不足，商品存储在海关</dd>
+									<dd> 仓库。</dd>
+								</dl>
+								<dl>
+									<dt>垂直B2C模式 <br>（保税区直营+自采）</dt>
+									<dd>平台选择某个特定领域，直接参与。</dd>
+									<dd>货源组织、物流仓储、买卖流程等；</dd>
+								</dl>
+								<dl>
+									<dt>C2C模式 <br>（直销、直购、直邮）</dt>
+									<dd>由海外零售商直销给中国消费者。</dd>
+								</dl>
+								<p>
+									<a href="#">了解详情</a>
+									<a href="#">获取方案</a>
+								</p>
+								<h3>相关案例</h3>
+								<div>
+									<img src="img/cjc_sld_i_03_03.png" alt="" />
+									<img src="img/cjc_sld_i_03_06.png" alt="" />
+									<img src="img/cjc_sld_i_03_08.png" alt="" />
+									<img src="img/cjc_sld_i_03_10.png" alt="" />
+								</div>
+							</div>
+							<!--第四个显示框-->
+							<div class="box_right_show" style="display: none;">
+								<h3>农村电商解决方案</h3>
+								<p>凭借贴近农户的各县、村级服务站以及乡村推广员等特色优势，完美打通当下农村/城市之间的信息壁垒，有效实现“农产品上行，工业品下行”的双向互通</p>
+								<p>解决：· 物流配送 · 消费群体不会操作 · 信任问题 · 平台引流等难题</p>
+								<dl>
+									<dt>县、村两级服务站点</dt>
+									<dd>方案可实现消费者下单后由就近的村级服务</dd>
+									<dd>站门店进行商品的配送，也可以去就近的服</dd>
+									<dd>务站门店内进行线下的核销，自提商品。</dd>
+								</dl>
+								<dl>
+									<dt>乡村推广员</dt>
+									<dd>引入推广员角色，可基于自己的熟关系在</dd>
+									<dd>自己的微信朋友圈等社交化平台内进行推</dd>
+									<dd>荐引流。</dd>
+								</dl>
+								<dl>
+									<dt>多样化营销</dt>
+									<dd>方案提供多种热门的营销活动，促使</dd>
+									<dd> 流量进一步转化为销量，开启农村电</dd>
+									<dd>商蓝海市场。</dd>
+								</dl>
+								<p>
+									<a href="#">了解详情</a>
+									<a href="#">获取方案</a>
+								</p>
+								<h3>相关案例</h3>
+								<div>
+									<img src="img/cjc_sld_l_03.png" alt="" />
+									<img src="img/cjcj_sld_l_06.png" alt="" />
+									<img src="img/cjc_sld_l_08.png" alt="" />
+									<img src="img/cjc_sld_l_10.png" alt="" />
+								</div>
+							</div>
+							<!--第五个显示框-->
+							<div class="box_right_show" style="display: none;">
+								<h3>零售商超电商解决方案</h3>
+								<p>结合互联网趋势与商超行业的特性，提供多销售终端，线上线下一体化，从商品销售管理、财务结算到物流配送 ...</p>
+								<p>完善的 · 商品管理体系 · 会员管理体系 · 营销管理体系 · 商超结算体系 · …</p>
+								<dl>
+									<dt>线上全渠道拓展</dt>
+									<dd>从传统商超到电商转型，从PC到移动，</dd>
+									<dd> 从单点到多点布局，从纯电商到社交媒</dd>
+									<dd>体，实现零售的更多可能性。</dd>
+								</dl>
+								<dl>
+									<dt>线下体验完善</dt>
+									<dd>为消费者提供更便捷的购物体验，涉及</dd>
+									<dd>从排队买单到送货上门等环节，让实体</dd>
+									<dd>商超变得更加“接地气”。</dd>
+								</dl>
+								<dl>
+									<dt>对接收银台</dt>
+									<dd>线上线下统一结算，线下网点收银</dd>
+									<dd>支持采购、销售、盘点、结算等各</dd>
+									<dd>个环节，帮您轻松实现业绩翻倍涨，</dd>
+									<dd> 成本直线降！</dd>
+								</dl>
+								<p>
+									<a href="#">了解详情</a>
+									<a href="#">获取方案</a>
+								</p>
+								<h3>相关案例</h3>
+								<div>
+									<img src="img/cjc_sld_u_03.png" alt="" />
+									<img src="img/cjc_sld_u_06.png" alt="" />
+									<img src="img/cjc_sld_u_08.png" alt="" />
+									<img src="img/cjc_sld_u_10.png" alt="" />
+								</div>
+							</div>
+							<!--第六个显示框-->
+							<div class="box_right_show" style="display: none;">
+								<h3>官方商城解决方案</h3>
+								<p>快速搭建多终端在线零售官方商城，打通会员、积累客户，支持门店O2O</p>
+								<p>粉碎“渠道单一” 7大线上商城统一后台管理运营 只有尽可能广的在线上铺货、售货，接触到消费者的可能性才会越大</p>
+								<dl>
+									<dt>精致外观独一无二</dt>
+									<dd>PC端/移动端拥有海量商城模板，可视化装修</dd>
+									<dd> 轻松打造“与众不同”的商城外观。</dd>
+								</dl>
+								<dl>
+									<dt>商城+门店深度结合</dt>
+									<dd>线上线下深度结合，无论是零售还是</dd>
+									<dd>服务业搭配B2C商城一体化运营管理</dd>
+									<dd> 更省心</dd>
+								</dl>
+								<dl>
+									<dt>海量促销玩法</dt>
+									<dd>可自由创建各类促销活动，如拼团、</dd>
+									<dd> 秒杀、团购、限时折扣、满即送、优</dd>
+									<dd> 惠套装、移动专享、积分兑换、代金</dd>
+									<dd> 券、加价购、推荐展位等</dd>
+								</dl>
+								<p>
+									<a href="#">了解详情</a>
+									<a href="#">获取方案</a>
+								</p>
+								<h3>相关案例</h3>
+								<div>
+									<img src="img/cjc_sld_w_03.png" alt="" />
+									<img src="img/cjc_sld_w_06.png" alt="" />
+									<img src="img/cjc_sld_w_08.png" alt="" />
+									<img src="img/cjc_sld_w_10.png" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--电商增值业务-->
+			<div class="add_value">
+				<div class="ad_val_cenote">
+					<!--电商增值业务标题文字-->
+					<div class="ad_val_cen_title">
+						<h2>电商增值业务</h2>
+						<p>极致完善，致力于细致全面的电商服务，让企业做电商更简单！</p>
+					</div>
+					<!--电商增值业务主要部分-->
+					<div class="ad_val_cen_main">
+						<!--电商增值业务主要部分中的导航栏选项卡-->
+						<ul>
+							<li class="ad_val_list"><img src="img/cjc1_sld_dp.png"/>
+								<p>开店必备</p>
+							</li>
+							<li><img src="img/cjc2_sld_shangc.png"/>
+								<p>商城运营</p>
+							</li>
+							<li><img src="img/cjc3_sld_tuig.png"/>
+								<p>渠道推广</p>
+							</li>
+						</ul>
+						<!--导航显示对应第一个框-->
+						<div class="ad_val_cen_main_box" >
+							<ul>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_yx_3.png"/>
+										<p>商城开发</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>商城开发</h3>
+										有成熟的标准版商城,接受个性化定制功能开发...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_i(27).png"/>
+										<p>首页设计</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>首页设计</h3>
+										提供商城模板设计及首页装修...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_i(28).png"/>
+										<p>宝贝详述</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>宝贝描述</h3>
+										提供商品详情页宝贝文字描述及图片制作...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_i(29).png"/>
+										<p>海报设计</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>海报设计</h3>
+										设计公司宣传海报，招商海报，商城海报...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_i(30).png"/>
+										<p>图片处理</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>图片处理</h3>
+										图片美化，图片设计，图片尺寸调整...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_i(1).png"/>
+										<p>广告图片</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>广告图片</h3>
+										提供推广广告所需图片的策划设计...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_i(2).png"/>
+										<p>域名主机</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>域名主机</h3>
+										提供域名及云服务器购买服务...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_i(3).png"/>
+										<p>400电话</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>400电话</h3>
+										提供400电话的选号及开通服务...
+									</div>
+								</li>
+								
+							</ul>
+						</div>
+						<!--导航显示对应第二个框-->
+						<div class="ad_val_cen_main_box" style="display: none">
+							<ul>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_yunying@2x.png"/>
+										<p>商城代运营</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>商城代运营</h3>
+										提供官方商城及第三方商城代运营服务...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_pinpai@2x.png"/>
+										<p>品牌策划</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>品牌策划</h3>
+										为企业提供品牌营销策划,品牌设计等品牌营销全案策划服务...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_chanpin@2x.png"/>
+										<p>产品规划</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>产品规划</h3>
+										为企业制定可以把握市场机会，满足消费者需要的产品的远景目标...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_xiu@2x.png"/>
+										<p>店铺装修</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>店铺装修</h3>
+										提供平台及店铺的全方位装修设计服务...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_kefu@2x.png"/>
+										<p>客服外包</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>客户外包</h3>
+										网店客服外包,电商客服外包,客服类型齐全..
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_guanli@2x.png"/>
+										<p>运营顾问</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>运营顾问</h3>
+										为企业提供全面的电子商务运营策划..
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_paishe@2x.png"/>
+										<p>产品拍摄</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>产品拍摄</h3>
+										专业的摄影团队现场拍摄产品图片及视频...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_tuoguan@2x.png"/>
+										<p>服务器托管</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>服务器托管</h3>
+										专业提供服务器托管,服务器租用，服务器维护...
+									</div>
+								</li>
+								
+							</ul>
+						</div>
+						<!--导航对应第三个框-->
+						<div class="ad_val_cen_main_box" style="display: none;">
+							<ul>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_yiingxiao@2x.png"/>
+										<p>整合营销</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>整合营销</h3>
+										为企业提供商城整体营销推广解决方案...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_new@2x.png"/>
+										<p>新闻营销</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>新闻营销</h3>
+										新闻营销.网媒发布,为您做好网络品牌推广...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_jingjia@2x.png"/>
+										<p>搜索引擎竞价</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>搜索引擎竞价</h3>
+										托管百度，360，搜狗，神马等竞价账户...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld-seo@2x.png"/>
+										<p>SEO</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>SEO</h3>
+										提供商城网站关键词优化排名服务...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_toutiao@2x.png"/>
+										<p>今日头条推广</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>今日头条推广</h3>
+										托管今日头条信息流投放账户...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_guanli@2x.png"/>
+										<p>腾讯信息流</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>腾讯信息流</h3>
+										托管腾讯系信息流投放账户...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld_tuiguang@2x.png"/>
+										<p>公众号推广</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>公众号推广</h3>
+										微信公众号商城搭建，运营，推广一体化服务...
+									</div>
+								</li>
+								<li>
+									<div class="adcm_box_ico">
+										<img src="img/cjc_sld-meiti@2x.png"/>
+										<p>新媒体代运营</p>
+									</div>
+									<div class="adcm_box_coin">
+										<h3>新媒体代运营</h3>
+										提供新媒体代运营服务，为企业商城保驾护航...
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--成功客户案例-->
+			<div class="success">
+				<div class="success_case">
+					<div class="success_case_title">
+						<h2>成功客户案例</h2>
+						<p>商联达已为全球30000企业提供优质可靠的电商服务,客户的满意是我们不懈的动力</p>
+					</div>
+					<ul>
+						<li><img src="img/cjc_an1.png" alt="" /></li>
+						<li><img src="img/cjc_an2.png" alt="" /></li>
+						<li><img src="img/cjc_an3.png" alt="" /></li>
+						<li><img src="img/cjc_an4.png" alt="" /></li>
+						<li><img src="img/cjc_an5.png" alt="" /></li>
+						<li><img src="img/cjc_an6.png" alt="" /></li>
+						<li><img src="img/cjc_an7.png" alt="" /></li>
+						<li><img src="img/cjc_an8.png" alt="" /></li>
+						<li><img src="img/cjc_an9.png" alt="" /></li>
+						<li><img src="img/cjc_an10.png" alt="" /></li>
+						<li><img src="img/cjc_an11.png" alt="" /></li>
+						<li><img src="img/cjc_an12.png" alt="" /></li>
+						<li><img src="img/cjc_an13.png" alt="" /></li>
+						<li><img src="img/cjc_an14.png" alt="" /></li>
+						<li><img src="img/cjc_an15.png" alt="" /></li>
+						<li><img src="img/cjc_an16.png" alt="" /></li>
+						<li><img src="img/cjc_an17.png" alt="" /></li>
+						<li><img src="img/cjc_an18.png" alt="" /></li>
+						<li><img src="img/cjc_an19.png" alt="" /></li>
+						<li><img src="img/cjc_an20.png" alt="" /></li>
+					</ul>
+					<p class="success_case_more">查看更多</p>					
+				</div>
+			</div>
+			<!--时间数值-->
+			<div class="timing">
+				<ul class="timing_container">
+					<li>
+						<p class="njscd">
+							<span>10</span>
+							<em>+</em>
+						</p>
+						<span class="line"></span>
+						<p class="tips">年技术沉淀</p>
+					</li>
+					<li>
+						<p class="zyjstd">
+							<span>150</span>
+							<em>+</em>
+						</p>
+						<span class="line"></span>
+						<p class="tips">专业技术团队</p>
+					</li>
+					<li>
+						<p class="qykhxz">
+							<span>30000</span>
+							<em>+</em>
+						</p>
+						<span class="line"></span>
+						<p class="tips">企业客户选择</p>
+					</li>
+					<li>
+						<p class="shzc">
+							<span>7</span>
+							x
+							<span>12</span>
+							<em>H</em>
+						</p>
+						<span class="line"></span>
+						<p class="tips">售后支持</p>
+					</li>
+				</ul>
+			</div>
+			<!--新闻资讯-->
+			<div class="news">
+				<!--新闻资讯标题部分-->
+				<div class="news_title">
+					<h1>新闻资讯</h1>
+					<p>及时了解国内外电商最新动态，紧跟电商趋势</p>
+					<ul>
+						<!--三个图片部分布局-->
+						<li>
+							<h2>
+			                    <ins></ins>&nbsp;&nbsp;&nbsp;公司动态
+			                </h2>
+			                <dl>
+			                    <dt><img src="img/cjc_1a.jpg" alt=""></dt>
+			                    <dd>案例|商联达携手斐讯缔造“严选”电商截胡网易、有品 ，“0”元购模式挑战白条、花呗</dd>
+			                </dl>
+			                <p>升级| 商联达推手系统上线，“重构分账规则，加码 ...</p>
+			                <p>案例| 关注饮食健康 商联达助力好食达集团搭建高 ...</p>
+			                <p>案例|直播+电商 “好食材+好产地”助力品质升级”</p>
+			                <a href="#">查看更多</a>
+						</li>
+						<li>
+							<h2>
+			                    <ins></ins>&nbsp;&nbsp;&nbsp;新零售+电商
+			                </h2>
+			                <dl>
+			                    <dt><img src="img/cjc_2a.jpg" alt=""></dt>
+			                    <dd>案例从网上商城到新奇特新零售平台，大禹创联让生意更好做！</dd>
+			                </dl>
+			                <p>案例|知名品牌“Wanlida Trading”携手商联达玩转...</p>
+			                <p>新零售时代，农村电商何去何从?</p>
+			                <p>商联达助力中国文物保护基金会打造互联网+鉴宝平台</p>
+			                <a href="#">查看更多</a>
+						</li>
+						<li>
+							<h2>
+			                    <ins></ins>&nbsp;&nbsp;&nbsp;区块链+电商
+			                </h2>
+			                <dl>
+			                    <dt><img src="img/cjc_3a.jpg" alt=""></dt>
+			                    <dd>全球首个区块链电商上线背后:区块链正逐渐产业化和大众化_..._</dd>
+			                </dl>
+			                <p>商联达战略布局区块链+，推“区块链+电商”整体解...</p>
+			                <p>当区块链遇上跨境电商，能摩擦出怎样的火花？</p>
+			                <p>区块链如何在未来几年改变电商行业？</p>
+			                <a href="#">查看更多</a>
+						</li>
+					</ul>
+					<div>
+						<a href="#">更多动态&nbsp;></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="open">
+					<h2>马上开启自己的电商业务</h2>
+					<div class="open_btn">
+			            <a href="#" class="open_btn_show">立即体验</a>
+			        </div>
+				</div>
+			</div>
+			<!--尾部盒子-->
+			<div class="footer_box">
+				<!--尾部盒子版心-->
+				<div class="footer_box_contain">
+					<!--尾部盒子上部分-->
+					<div class="footer_box_top">
+						<!--尾部盒子上部分中的左侧电话栏-->
+						<div class="f_b_top_tel">
+							<!--尾部盒子左侧电话栏里的上部分-->
+							<div class="f_b_top_tel_top">
+								<i></i>
+								<div>
+			                        <p>全国统一服务热线</p>
+			                        <p>400-881-0877</p>
+			                    </div>
+							</div>
+							<!--尾部盒子左侧电话栏里的下部分-->
+							<div class="f_b_top_tel_bottom">
+								<i></i>
+								<div>
+									<div class="f_b_top_tel_bottom_line">
+			                            <p>国家高新技术企业编号：</p>
+			                            <p>GR201811009357</p>
+			                            <p>中关村高新技术企业编号：</p>
+			                            <p>20182010625501</p>
+			                       </div>
+								</div>
+							</div>
+						</div>
+						<!--尾部盒子上部分的右侧导航部分-->
+						<div class="f_b_top_nav">
+							<dl>
+			                    <dt>关于商联达</dt>
+			                    <dd>公司介绍</dd>
+			                    <dd>荣誉资质</dd>
+			                    <dd>联系我们</dd>
+			                    <dd>合作案例</dd>
+			                    <dd>公司新闻</dd>
+			                </dl>
+			                <dl>
+			                    <dt>热门电商产品</dt>
+			                    <dd>多商户商城系统</dd>
+			                    <dd>同城O2O商城系统</dd>
+			                    <dd>B2B批发商城系统</dd>
+			                    <dd>电商收银系统</dd>
+			                    <dd>电商ERP系统</dd>
+			                </dl>
+			                <dl>
+			                    <dt>电商解决方案</dt>
+			                    <dd>新零售解决方案</dd>
+			                    <dd>跨境电商解决方案</dd>
+			                    <dd>农村电商解决方案</dd>
+			                    <dd>区块链+电商解决方案</dd>
+			                    <dd>商业综合体解决方案</dd>
+			                </dl>
+			                <dl>
+			                    <dt>电商学院</dt>
+			                    <dd>电商干货</dd>
+			                    <dd>行业快讯</dd>
+			                    <dd>新零售</dd>
+			                    <dd>B2B电商</dd>
+			                    <dd>B2B2C电商</dd>
+			                </dl>
+			                <!--尾部盒子上部分的右侧导航部分的二维码图片-->
+			                <dl class="right_erweima">
+			                    <dt>关注我们</dt>
+			                    <dd>
+			                        <img src="img/cjc_er.png" alt="">
+			                        <span>获最新电商动态</span>
+			                    </dd>
+			                </dl>
+						</div>
+					</div>
+					<!--尾部盒子下部分-->
+					<div class="footer_box_bottom">
+						<p class="f_b_bottom_address">
+			                <span>上海总部：上海市闵行区申虹路666弄1号楼606</span>
+			                <span>北京公司地址：北京市海淀区中关村东升科技园B-2楼1F</span>
+			                <span>广州公司地址：广州市天河区珠江新城珠江西路8号高德置地D座15楼</span>
+			            </p>
+			            <p class="f_b_bottom_text">Copyright2006-2019 商联达_全球领先的新零售智慧电商生态系统及服务提供商!All Rights Reserved.<a href="#">沪ICP备：19040631</a></p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<script>
+	//			获取body的宽度  给到下拉框
+				var body_width =$("body").width();
+				$(".soft_production").width(body_width);
+				//获取当前index值
+				var index;
+	//			滚轮事件   当滚动条大于    的时候头部变化
+				$(window).scroll(function(){
+//					检测滚动条数值
+//					console.log($("html,body").scrollTop());
+					if($("html,body").scrollTop()>652){
+						$("header").addClass("header_show");
+						$(".img_left_show").attr("src","img/cjc1_logo.png");
+						$(".img_right_show").attr("src","img/cjc1_ckys_04.png");
+						$("header>.header_main>nav>.header_nav>li").addClass("li_show");
+						$("header>.header_main>nav>.header_nav_right_logo>p").addClass("p_show");
+					}else{
+						$("header").removeClass("header_show");
+						$(".img_left_show").attr("src","img/cjc1_sldlogo.png");
+						$("header>.header_main>nav>.header_nav>li").removeClass("li_show");
+						$("header>.header_main>nav>.header_nav_right_logo>p").removeClass("p_show");
+						$(".img_right_show").attr("src","img/cjc2_ckys.png");
+					}
+				})
+	//			轮播图的功能
+				var swiper = new Swiper('.swiper-container',{
+						pagination: {
+						el: '.swiper-pagination',
+//						可点
+						clickable:true,
+					},
+//						无限循环
+						loop:true,
+//						自动播放
+						autoplay: {
+						delay: 2500,
+						disableOnInteraction: false,
+					},
+				});
+//				轮播图移入移出效果
+				swiper.el.onmouseenter = function(){
+					swiper.autoplay.stop();
+				}
+				swiper.el.onmouseleave = function(){
+					swiper.autoplay.start();
+				}
+//				中部移入移出效果
+
+				$(".rotation_footer>div").mouseenter(function(){
+					$(this).addClass("rot_footer_show");
+				})
+				$(".rotation_footer>div").mouseleave(function(){
+					$(this).removeClass("rot_footer_show");
+				})			
+//				middle选项卡中背景图片移入移出
+				$(".middle>.middle_text>.middle_option>ul>li").mouseenter(function(){
+					index = $(this).index();
+					$(this).addClass("md_option_show");
+					//箭头移动功能
+					$(".middle>.middle_text>.middle_option>.move_img").animate({"left":240*index+"px"},250);
+					//旋转图效果
+					$(".middle>.cjc_PlatList>div>.cjc_PlatList1").animate({},function(){
+					$(".middle>.cjc_PlatList>div>.cjc_PlatList1").eq(index).css({"transform":"rotateY(0deg)"}).siblings().css({"transform":"rotateY(90deg)"});
+					})
+				})
+				$(".middle>.middle_text>.middle_option>ul>li").mouseleave(function(){
+					$(this).removeClass("md_option_show");
+				})
+//				移入左侧选项卡的功能
+				$(".solution>.solution_option>.sol_opt_box>.box_left_list>ul>li").mouseenter(function(){
+					index = $(this).index();
+					//热门电商解决办法的选项卡移入移出变背景功能
+					$(this).addClass("box_left_list_li_show").siblings().removeClass("box_left_list_li_show");
+					//移入左侧选项卡让对应右侧显示框显示
+					$(".solution>.solution_option>.sol_opt_box>.box_right>.box_right_show").eq(index).show().siblings("div").hide();
+				})
+//				移入电商增值标题下的导航项的功能
+				$(".add_value>.ad_val_cenote>.ad_val_cen_main>ul>li").mouseenter(function(){
+//					移入使导航项的背景颜色更换
+					$(this).addClass("ad_val_list").siblings().removeClass("ad_val_list");
+//					获取移入的索引值
+					index = $(this).index();
+//					使对应的盒子出现
+					$(".add_value>.ad_val_cenote>.ad_val_cen_main>.ad_val_cen_main_box").eq(index).show().siblings(".ad_val_cen_main_box").hide();
+				})
+		</script>
+	</body>
+</html>
