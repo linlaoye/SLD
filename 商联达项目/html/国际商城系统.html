@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>国际商城系统</title>
+		 <link rel="icon" href="../img/toumtupian.png"/>
+		 <script src="../js/jquery-3.5.0.min.js"></script>
+		 <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			body{
+				height: 5000px;
+				min-width: 1540px;
+				
+			}
+			
+			li{
+				list-style: none;
+				cursor:pointer;
+			}
+			.text_juzhong{
+				position: absolute;
+				left: 34%;
+				transform: translateX(-50%);
+			}
+			
+			/*第一部分头部*/
+			.lk_lvse{
+				width: 100%;
+				height: 550px;
+				margin-top: 100px;
+				text-align: center;
+				background-size:contain;
+				/*background-position: center;*/
+				background-repeat:no-repeat;
+				position:relative;
+				background-image: url(../img/lk_5_3.jpg);
+			}
+			/*第二部分英文系统特点区域*/
+			.lk_xitong{
+				height: 350px;
+				width: 80%;
+				margin: 0px auto;
+				text-align: center;
+			}
+			/*系统区域正文内容*/
+			.lk_xitong>p{
+				color: gray;
+				size: 15px;
+			}
+			/*ui图标*/
+			.lk_xitong>ul{
+				margin-left:120px ;
+				margin-top:25px ;
+				margin-bottom:25px;
+			}
+			.lk_xitong>ul>li{
+				width: 170px;
+				height: 130px;
+				float: left;
+				margin:10px ;
+				border-radius: 10px;
+				transition: all 0.4s;
+			}
+			.lk_xitong>ul>li:hover{
+				box-shadow:0px 0px 10px
+			}
+			.lk_xitong>ul>li>p{
+				margin-top:20px ;
+			}
+			
+			/*第三部分*/
+			
+			/*第三部分小图标*/
+			.lk_5_xiaotubiao{
+				width: 100%;
+				height: 550px;
+				text-align: center;
+				background-size:contain;
+				/*background-position: center;*/
+				background-repeat:no-repeat;
+				position:relative;
+				background-image: url(../img/lk_5_2.jpg);
+				}
+			.lk_5_xiaotubiao>h2{
+				width: 100%;
+				height: 500px;
+				top:5%;
+				left: 50%;
+				color: white;
+			}
+			.lk_5_xiaotubiao>p{
+				width: 100%;
+				height: 500px;
+				top:15%;
+				left: 50%;
+				color: white;
+			}
+			.lk_5_xiaotubiao>ul{
+				width:1200px;
+				height: 200px;
+				position: absolute;
+				left: 10%;
+				top: 30%;
+				/*background-color: gray;*/
+			}
+			.lk_5_xiaotubiao>ul>li{
+				width:150px;
+				height: 200px;
+				position: relative;
+				float: left;
+				/*background-color: white;*/
+				/*border: 1px solid black;*/
+				margin: 0px 22px ;
+			}
+			.lk_5_xiaotubiao>ul>li>p{
+				height: 80px;
+				line-height: 80px;
+				color: white;
+			}
+			/*第四部分白底*/
+			.lk_jianjie1{
+				position: relative;
+				width: 1540px;
+				height: 600px;
+				text-align: center;
+				
+			}
+			.lk_jianjie1>h2{
+				position: absolute;
+				display: inline-block;
+				top: 12%;
+				left: 38%;
+			}
+			
+			.lk_jianjie1>p{
+				position: absolute;
+				display: inline-block;
+				width: 1000px;
+				top: 18%;
+				left: 19%;
+			}
+			.lk_jianjie1>img{
+				width: 1000px;
+				position: absolute;	
+				top: 31%;
+				left: 18%;
+			}
+			  
+			  /*国旗部分*/
+	        .lk_daguoqi{
+	        	width: 100%;
+	        	height: 600px;
+	        	background-color: rgba(240,240,240);
+	        	position: relative;
+	        	perspective: 1000px;
+	        }
+	        .lk_daguoqi>.jjjzzz{
+	        	text-align: center;
+	        }
+	        .lk_digguoqi {
+	            position: absolute;
+	            width: 300px;
+	            height: 200px;
+	            left: 40%;
+	            top: 15%;
+	            margin: 150px auto;
+	            transform-style: preserve-3d;
+	            /* 添加动画效果 */
+	            animation: rotate 15s linear infinite;
+	            background: url(media/pig.jpg) no-repeat;        
+	        }
+	        .lk_digguoqi:hover {
+	            /* 鼠标放入section 停止动画 */
+	            /*animation-play-state: paused;*/
+	        }
+	        @keyframes rotate {
+	            0% {
+	                transform: rotateY(0);
+	            }
+	            100% {
+	                transform: rotateY(360deg);
+	            }
+	        }
+	        .lk_digguoqi  .lk_smguoq{
+	            position: absolute;
+	            top: 0;
+	            left: 0;
+	            width: 100%;
+	            height: 100%;
+	        }
+	        .lk_smguoq>p{
+	        	position: absolute;
+	        	bottom: 30px;
+	        	left: 20%;
+	        	transform: rotateX(50%);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(1) { /* 先旋转好了再 移动距离 */
+	            transform: rotateY(0) translateZ(400px);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(2) {
+	            transform: rotateY(45deg) translateZ(400px);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(3) {
+	            transform: rotateY(90deg) translateZ(400px);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(4) {
+	            transform: rotateY(135deg) translateZ(400px);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(5) {
+	            transform: rotateY(180deg) translateZ(400px);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(6) {
+	            transform: rotateY(225deg) translateZ(400px);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(7) {
+	            transform: rotateY(270deg) translateZ(400px);
+	        }
+	        .lk_digguoqi .lk_smguoq:nth-child(8) {
+	            transform: rotateY(315deg) translateZ(400px);
+	        }
+			/*第六部分*/  
+			.lk_henduoul{
+				width: 100%;
+				height: 1200px;
+				position: relative;
+			}
+			.lk_henduoul>h2{
+				position: absolute;
+				left: 50%;
+				top: 10%;
+	        	transform: translateX(-50%);
+			}
+			.lk_henduoul>p{
+				position: absolute;
+				top: 15%;
+				left: 50%;
+	        	transform: translateX(-50%);
+			}
+			.lk_henduoul>ul{
+				position: absolute;
+				width: 86%;
+				top: 20%;
+				height: 900px;
+				left: 50%;
+	        	transform: translateX(-50%);
+				
+			}
+			.lk_henduoul>ul>li{
+				position: relative;
+				width: 24.8%;
+				height: 300px;
+				float: left;
+				text-align: center;
+				border: 1px solid rgba(240,240,240);
+			}
+			.lk_henduoul>ul>li:hover{
+				box-shadow: 0px 0px 10px rgba(240,240,240);
+			}
+			.lk_henduoul>ul>li>img{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				margin-top:50px ;
+				/*left: 50%;
+	        	transform: translateX(-50%);*/
+			}
+			.lk_henduoul>ul>li>p{
+				position: relative;
+				margin: 10px;
+			}
+			/*第七部分*/  
+			.lk_hdulli{
+				width: 100%;
+				height: 500px;
+				position: relative;
+			}
+			.lk_hdulli>h2{
+				position: absolute;
+				left: 50%;
+				top: 10%;
+	        	transform: translateX(-50%);
+			}
+			.lk_hdulli>p{
+				position: absolute;
+				top: 20%;
+				left: 50%;
+	        	transform: translateX(-50%);
+			}
+			.lk_hdulli>ul{
+				position: absolute;
+				width: 86%;
+				top: 30%;
+				height: 400px;
+				left: 50%;
+	        	transform: translateX(-50%);
+				
+			}
+			.lk_hdulli>ul>li{
+				position: relative;
+				width: 24.8%;
+				height: 100px;
+				float: left;
+				text-align: center;
+				border: 1px solid rgba(240,240,240);
+			}
+			.lk_hdulli>ul>li:hover{
+				box-shadow: 0px 0px 10px rgba(240,240,240);
+			}
+			.lk_hdulli>ul>li>img{
+				width: 100px;
+				height: 100px;
+				position:absolute;
+				left: 10px;
+			}
+			.lk_hdulli>ul>li>p{
+				position:absolute;
+				width: 200px;
+				top: 40%;
+				text-align: left;
+				left: 120px;
+				font-size: 13px;
+			}
+			.lk_hdulli>ul>li>p:nth-last-of-type(2){
+				top: 20%;
+			}
+			
+				/*底部开始体验*/
+			.lk_tiyan{
+				width: 1540px;
+				height: 300px;
+				/*margin-top: 3500px;*/
+				/*background-color:red;*/
+				position: relative;
+				background-image:url(../img/lk_caise111.png);
+			}
+			.lk_tiyan>ul{
+				width: 300px;
+				height: 80px;
+				text-align: center;
+				color: white;
+				border: 2px solid white;
+				font-size: 30px;
+				line-height: 80px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%);
+				border-radius: 10px;
+				
+			}
+			
+			.lk_tiyan>p{
+				position: absolute;
+				top: 20%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 500px;
+				height:40px;
+				text-align: center;
+				color: white;
+				font-size: 30px;
+				line-height: 40px;
+				transition: all 0.5s; 
+			}
+			.lk_tiyan>p:hover{
+				font-size: 35px;
+			}
+			/*页脚部分*/
+			.lk_foot{
+				width: 1540px;
+				height: 300px;
+				position: relative;
+				background-image: url(../img/foot.png);
+			}
+			.lk_foot>ul{
+				width: 700px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				position: absolute;
+				left: 32%;
+				color: white;		
+			}
+			.lk_foot>ul>li{
+				width: 19%;
+				margin: 0px 15px;
+				float: left;
+			}
+			.lk_foot>ul>li>ul{	
+				position: absolute;
+				top: 60px;
+				text-align: center;
+			}
+			.lk_foot>ul>li>ul>li{
+				color: gray;
+				height: 20px;
+				line-height: 20px;
+				font-size: 10px;
+				padding-left:35px
+			}
+			.lk_foot>ul>li>ul>li:hover{
+				color: white;
+				text-decoration:underline
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部顶部-->
+			<div class="header_top">
+				<!--头部顶部右边导航栏-->
+				<div class="header_top_right">
+					<a href="#">服务</a>
+					<span>|</span>
+					<a href="#">上海公司</a>
+					<span>|</span>
+					<a href="#">北京公司</a>
+					<span>|</span>
+					<a href="#">广州公司</a>
+					<a href="#">全国统一热线 400-881-0877</a>
+				</div>
+			</div>
+			<!--头部-->
+			<header>
+				<!--头部主要部分-->
+				<div class="header_main">
+					<!--头部左侧logo-->
+					<div class="header_logo">
+						<img src="../img/cjc1_sldlogo.png" class="img_left_show"/>
+					</div>
+					<!--头部中部导航栏-->
+					<nav>
+						<ul class="header_nav">
+							<li><a href="../index.html">首页</a></li>
+							<li><a href="#">软件产品</a>
+								<!--软件产品的下拉框-->
+								<div class="soft_production">
+									<!--软件产品下拉框的主要部分-->
+									<div class="soft_production_main">
+										<!--软件产品下拉框的左侧部分-->
+										<div class="soft_production_main_left">
+											<ul class="main_left_list">
+												<!--每个选项-->
+												<li>
+													<a href="B2B2C多用户商城系统.html" target="_blank">
+														<img src="../img/cjc1_list1.png"/>
+														<div class="text_content">
+															<h3>B2B2C多用户商城系统
+																<em>HOT</em>
+															</h3>
+															<p>类似天猫或京东的商城平台，支持自营和商家入驻，支持O2O</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="国际商城系统.html" target="_blank">
+														<img src="../img/cjc2_list2.png"/>
+														<div class="text_content">
+															<h3>英文版商城系统
+																<em>NEW</em>
+															</h3>
+															<p>国际版商城系统，适合跨境出口、国外独立运营及多语种电商</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc3_list3.png"/>
+														<div class="text_content">
+															<h3>直播+短视频电商系统
+																<em>HOT</em>
+															</h3>
+															<p>融合直播+社交短视频+电商购物于一体的商城系统</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="B2C自营商城系统.html" target="_blank">
+														<img src="../img/cjc4_list4.png"/>
+														<div class="text_content">
+															<h3>B2C自营商城系统</h3>
+															<p>快速搭建多终端在线零售官方商城，打通会员、积累客户，支持o2o</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc5_list5.png"/>
+														<div class="text_content">
+															<h3>全渠道新零售系统</h3>
+															<p>新零售的核心在于线上线下的结合，商联达新零售系统包含商</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc6_list6.png"/>
+														<div class="text_content">
+															<h3>APP商城系统</h3>
+															<p>覆盖IOS&Android双平台的原生app,系统功能全面，开源发售</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="B2B批发商城系统.html" target="_blank">
+														<img src="../img/cjc7_list7.png"/>
+														<div class="text_content">
+															<h3>B2B批发商城系统</h3>
+															<p>能同时支持在线批发、订货、零售、分销的电商平台系统</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="知识付费系统.html" >
+														<img src="../img/cjc8_list8.png"/>
+														<div class="text_content">
+															<h3>知识付费系统</h3>
+															<p>支持直播/图文/音频/社群等多种内容付费模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc9_list9.png"/>
+														<div class="text_content">
+															<h3>微信商城系统</h3>
+															<p>超会卖货的移动微商城支持多种分销模式，快速提升业务收入</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="联到O2O商城系统.html">
+														<img src="../img/cjc10_list10.png"/>
+														<div class="text_content">
+															<h3>O2O商城系统
+																<em>HOT</em>
+															</h3>
+															<p>适应同城电商,京东到家,社区新零售等多种O2O业务模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc11_list11.png"/>
+														<div class="text_content">
+															<h3>电商平台个性化定制</h3>
+															<p>您的业务很独特，商联达为您在标准版基础上定制开发，大大缩短</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc12_list12.png"/>
+														<div class="text_content">
+															<h3>小程序商城系统</h3>
+															<p>全面打通微信及支付宝2大小程序，统一装修，数据同步</p>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<!--软件产品下拉框的右侧部分-->
+										<div class="soft_production_main_right">
+											<h3>全终端覆盖</h3>
+											<ul>
+												<li><img src="../img/cjc17_list17.png"/></li>
+												<li><img src="../img/cjc19_list19.png"/></li>
+												<li><img src="../img/cjc15_list15.png"/></li>
+												<li><img src="../img/cjc14_list14.png"/></li>
+												<li><img src="../img/cjc13_list13.png"/></li>
+												<li><img src="../img/cjc16_list16.png"/></li>
+											</ul>
+											<h3>多种语言可选</h3>
+											<p>拥有PHP及JAVA两种语言版本的商城系统</p>
+											<div>
+												<img src="../img/cjc18_list18.png"/>
+											</div>
+										</div>
+									</div>
+									<!--下拉框的尾部部分-->
+									<div class="production_footer">
+										<div class="production_footer_contain">
+											<div class="footer_contain_left">
+												<dl>
+													<dt style="color: #999;">电商配套系统:</dt>
+													<dd>电商收银系统</dd>
+													<dd style="color: red;">骑手配送系统</dd>
+													<dd>电商erp系统</dd>
+													<dd>系统对接</dd>
+												</dl>
+											</div>
+											<div class="footer_contain_right">
+												<span>全国统一服务热线：</span>400-881-0877
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">解决方案</a>
+								<!--解决方案的下拉框-->
+								<div class="soft_production">
+									<!--解决方案下拉框的主要部分-->
+									<div class="soft_production_main">
+										<!--解决方案下拉框的左侧部分-->
+										<div class="soft_production_main_left">
+											<ul class="main_left_list">
+												<!--每个选项-->
+												<li>
+													<a href="新零售.html" target="_blank">
+														<img src="../img/cjc_1list1.png"/>
+														<div class="text_content">
+															<h3>新零售电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>线上线下深度融合</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="国际.html" target="_blank">
+														<img src="../img/cjc_2list2.png"/>
+														<div class="text_content">
+															<h3>国际电商解决方案</h3>
+															<p>多语种支持</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="生鲜.html" target="_blank">
+														<img src="../img/cjc3_list3.png"/>
+														<div class="text_content">
+															<h3>生鲜电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>帮助生鲜商家快速布局线上</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="O2O解决方案.html" >
+														<img src="../img/cjc4_list4.png"/>
+														<div class="text_content">
+															<h3>O2O电商解决方案</h3>
+															<p>适应多种O2O业务模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc5_list5.png"/>
+														<div class="text_content">
+															<h3>百货商场电商解决方案</h3>
+															<p>线上线下资源整合</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc6_list6.png"/>
+														<div class="text_content">
+															<h3>医药电商解决方案</h3>
+															<p>助力医药行业开启线上业务</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc7_list7.png"/>
+														<div class="text_content">
+															<h3>视频电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>直播短视频+电商新模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc8_list8.png"/>
+														<div class="text_content">
+															<h3>B2B平台解决方案</h3>
+															<p>大宗交易电商平台</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc9_list9.png"/>
+														<div class="text_content">
+															<h3>企业采购电商解决方案</h3>
+															<p>用数字和链接让企业采购更简单</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc_10list10.png"/>
+														<div class="text_content">
+															<h3>跨境电商解决方案</h3>
+															<p>进口出口电商平台开发</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc_11list11.png"/>
+														<div class="text_content">
+															<h3>分销电商解决方案</h3>
+															<p>专属分销模式定制</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc12_list12.png"/>
+														<div class="text_content">
+															<h3>农村扶贫电商解决方案</h3>
+															<p>双向流农村电商平台</p>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<!--解决方案的右侧部分-->
+										<div class="soft_production_main_right">
+											<h3>全终端覆盖</h3>
+											<ul>
+												<li><img src="../img/cjc17_list17.png"/></li>
+												<li><img src="../img/cjc19_list19.png"/></li>
+												<li><img src="../img/cjc15_list15.png"/></li>
+												<li><img src="../img/cjc14_list14.png"/></li>
+												<li><img src="../img/cjc13_list13.png"/></li>
+												<li><img src="../img/cjc16_list16.png"/></li>
+											</ul>
+											<h3>配套软件推荐</h3>
+											<div>
+												<div>多用户商城系统</div>
+												<div>直播电商系统</div>
+												<div>骑手配送系统</div>
+												<div>电商收银系统</div>
+												<div>O2O商城系统</div>
+												<div>B2C商城系统</div>
+											</div>
+										</div>
+									</div>
+									<!--下拉框的尾部部分-->
+									<div class="production_footer">
+										<div class="production_footer_contain">
+											<div class="footer_contain_left">
+												<dl>
+													<dt style="color: #999;">定制解决方案:</dt>
+													<dd>区块链+积分商城解决方案</dd>
+													<dd>区块链+商品溯源解决方案</dd>
+													<dd style="color: red;">更多解决方案</dd>
+												</dl>
+											</div>
+											<div class="footer_contain_right">
+												<span>全国统一服务热线：</span>400-881-0877
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">电商代运营</a></li>
+							<li><a href="客户案列.html" target="_blank">客户案例</a></li>
+							<li><a href="电商学院.html" target="_blank">电商学院</a></li>
+							<li><a href="关于我们.html" target="_blank">关于我们</a></li>
+						</ul>
+						<!--导航栏右侧logo-->
+						<div class="header_nav_right_logo">
+							<img src="../img/cjc2_ckys.png" class="img_right_show"/>
+							<p>查看演示</p>
+						</div>
+					</nav>
+				</div>
+			</header>
+		
+		<!--头部绿色部分-->
+		<div class="lk_lvse"></div>
+		<!--系统文章位置-->
+		<div class="lk_xitong">
+			<br />
+			<h2>商联达多用户商城系统 . 新零售智慧电商生态系统</h1>
+			<br />
+			<p>商联达B2B2C多用户商城系统是主要面向中高端企业级客户，打造支持自营+招商入驻经营模式的电商平台（类似京东、天猫的经营模式），创新模块化设计整</p>
+			<p>合运营商，城市站点，供货商，批发商，入驻商，分销商，门店于一体，各个模块可自由拆分组合，可以让商家在这个电商多样化的时代下随时调整运营方案</p>
+			<p>一套系统想变就变</p>
+			<ul>
+				<li><img src="../img/lk_bg1 (29).png" alt="" /><p>源码</p></li>
+				<li><img src="../img/lk_bg1 (30).png" alt="" /><p>支持定制开发</p></li>
+				<li><img src="../img/lk_bg1 (31).png" alt="" /><p>支持多语言</p></li>
+				<li><img src="../img/lk_bg1 (32).png" alt="" /><p>支持SAAS及独立部署</p></li>
+				<li><img src="../img/lk_bg1 (33).png" alt="" /><p>支持集群架构</p></li>
+			</ul>
+		</div>	
+		<!--第三部分图标区域-->
+		<div class="lk_5_xiaotubiao">
+			<h2 class="text_juzhong">Multiple international payment methods</h2>
+			<p  class="text_juzhong">可根据海外贸易使用场景，增加多种支付方式</p>
+			<ul>
+				<li><img src="../img/lk_5_tubiao1.png" alt="" /><p>海外微信</p></li>
+				<li><img src="../img/lk_5_tubiao2.png" alt="" /><p>海外支付宝</p></li>
+				<li><img src="../img/lk_5_tubiao3.png" alt="" /><p>PayPal</p></li>
+				<li><img src="../img/lk_5_tubiao4.png" alt="" /><p>货到付款</p></li>
+				<li><img src="../img/lk_5_tubiao5.png" alt="" /><p>信用卡支付</p></li>
+				<li><img src="../img/lk_5_tubiao6.png" alt="" /><p>更多支付</p></li>
+				
+			</ul>
+		</div>
+		<!--第四部分文章-->
+		<div class="lk_jianjie1">
+			<h2>Fully visual custom decoration</h2>
+			<p>完全可视化自定义装修</p>
+			<img src="../img/lk_5_1.jpg"/>
+			
+		</div>
+		<!--第五部分国旗-->
+		<!--国旗-->
+		<div class="lk_daguoqi">
+			<h1 class="jjjzzz" style="line-height: 80px;">多种语言</h1>
+			<p class="jjjzzz">不同国家的用户、切换不同的语言</p>
+		    <div class="lk_digguoqi">
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi1.png) no-repeat;"><p>更多语种</p></div>
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi2.png) no-repeat;"><p>法语 French</p></div> 	
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi3.png) no-repeat;"><p>日语</p></div> 
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi4.png) no-repeat;"><p>西班牙语 Spanish</p></div> 
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi5.png) no-repeat;"><p>英语 English</p></div> 
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi6.png) no-repeat;"><p>中文简体</p></div> 
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi7.png) no-repeat;"><p>中文繁体</p></div> 
+		        <div class="lk_smguoq" style=" background:url(../img/lk_guoqi8.png) no-repeat;"><p>缅语 Burmese</p></div>    
+		    </div>
+		</div>
+		<!--第六部分-->
+		<div class="lk_henduoul">
+			<h2>Fine feature function display</h2>
+			<p>精细化特色功能展示</p>
+			<ul>
+				<li><img src="../img/lk_5_yuantubiao1.png"/><p>Self-support</p><p>自营</p></li>
+				<li><img src="../img/lk_5_yuantubiao2.png"/><p>Merchant entry</p><p>商家入驻</p></li>
+				<li><img src="../img/lk_5_yuantubiao3.png"/><p>Handover in multiple cities</p><p>多城市切换</p></li>
+				<li><img src="../img/lk_5_yuantubiao4.png"/><p>Multilingual</p><p>多语言</p></li>
+				<li><img src="../img/lk_5_yuantubiao5.png"/><p>Interconnection landing</p><p>互联登陆</p></li>
+				<li><img src="../img/lk_5_yuantubiao6.png"/><p>logistics tracking</p><p>物流跟踪</p></li>
+				<li><img src="../img/lk_5_yuantubiao7.png"/><p>Multi-level commodity classification</p><p>多级商品分类</p></li>
+				<li><img src="../img/lk_5_yuantubiao8.png"/><p>Invoice opening</p><p>发票开取</p></li>
+				<li><img src="../img/lk_5_yuantubiao9.png"/><p>Return application</p><p>退换货申请</p></li>
+				<li><img src="../img/lk_5_yuantubiao10.png"/><p>Nationalization interface</p><p>国家化界面</p></li>
+				<li><img src="../img/lk_5_yuantubiao11.png"/><p>Automatic translation</p><p>自动翻译</p></li>
+				<li><img src="../img/lk_5_yuantubiao12.png"/><p>Simple operation</p><p>操作简洁</p></li>
+				
+			</ul>
+		</div>
+		
+		
+		<div class="lk_hdulli">
+			<h2>Many sales promotion module</h2>
+			<p>众多促销模块</p>
+			<ul>
+				<li><img src="../img/lk_5_mokuai1.png"/><p>Coupon</p><p>促销券</p></li>
+				<li><img src="../img/lk_5_mokuai2.png"/><p>Assemble</p><p>拼团</p></li>
+				<li><img src="../img/lk_5_mokuai3.png"/><p>Group purchase</p><p>团购</p></li>
+				<li><img src="../img/lk_5_mokuai4.png"/><p>Time limited discount</p><p>限时折扣</p></li>
+				<li><img src="../img/lk_5_mokuai5.png"/><p>Full delivery</p><p>满即送</p></li>
+				<li><img src="../img/lk_5_mokuai6.png"/><p>Discount suit</p><p>优惠套装</p></li>
+				<li><img src="../img/lk_5_mokuai7.png"/><p>Product mix</p><p>产品组合</p></li>
+				<li><img src="../img/lk_5_mokuai8.png"/><p>Mobile exclusive</p><p>移动专享</p></li>
+				<li><img src="../img/lk_5_mokuai9.png"/><p>Integral shopping mall</p><p>积分兑换</p></li>
+				<li><img src="../img/lk_5_mokuai10.png"/><p>Advance sale</p><p>预告</p></li>
+				<li><img src="../img/lk_5_mokuai11.png"/><p>Sign in</p><p>签到</p></li>
+				<li><img src="../img/lk_5_mokuai12.png"/><p>Live broadcast</p><p>直播</p></li>
+				
+			</ul>
+		</div>
+		
+		
+		<!--开始体验文章位置-->
+		<div class="lk_tiyan">
+			<p>马上开启自己的电商之路</p>
+			<ul>
+				<li>开始体验</li>
+			</ul>
+		</div>
+		<!--页脚-->
+		<div class="lk_foot">
+			<ul>
+				<li>关于商联达
+					<ul>
+						<li>公司介绍</li>
+						<li>荣誉资质</li>
+						<li>联系我们</li>
+						<li>合作案例</li>
+						<li>公司新闻</li>
+					</ul>
+				</li>
+				<li>热门电商产品
+					<ul>
+						<li>多商户商城系统</li>
+						<li>同城O2O商城系统</li>
+						<li>B2B批发商城系统</li>
+						<li>电商收银系统</li>
+						<li>电商ERP系统</li>
+					</ul>
+				</li>
+				<li>电商解决方案
+					<ul>
+						<li>新零售解决方案</li>
+						<li>跨境电商解决方案</li>
+						<li>农村电商解决方案</li>
+						<li>区块链+电商解决方案</li>
+						<li>商业综合体解决方案</li>
+					</ul></li>
+				<li>电商学院
+					<ul>
+						<li>电商干货</li>
+						<li>行业快讯</li>
+						<li>新零售</li>
+						<li>B2B电商</li>
+						<li>B2B2C电商</li>
+					</ul></li>
+			</ul>
+		</div>
+		<script>
+				//			获取body的宽度  给到下拉框
+				var body_width =$("body").width();
+				$(".soft_production").width(body_width);
+				//获取当前index值
+				var index;
+	//			滚轮事件   当滚动条大于    的时候头部变化
+				$(window).scroll(function(){
+//					检测滚动条数值
+//					console.log($("html,body").scrollTop());
+					if($("html,body").scrollTop()>652){
+						$("header").addClass("header_show");
+						$(".img_left_show").attr("src","../img/cjc1_logo.png");
+						$(".img_right_show").attr("src","../img/cjc1_ckys_04.png");
+						$("header>.header_main>nav>.header_nav>li").addClass("li_show");
+						$("header>.header_main>nav>.header_nav_right_logo>p").addClass("p_show");
+					}else{
+						$("header").removeClass("header_show");
+						$(".img_left_show").attr("src","../img/cjc1_sldlogo.png");
+						$("header>.header_main>nav>.header_nav>li").removeClass("li_show");
+						$("header>.header_main>nav>.header_nav_right_logo>p").removeClass("p_show");
+						$(".img_right_show").attr("src","../img/cjc2_ckys.png");
+					}
+				})
+		</script>
+	</body>
+</html>

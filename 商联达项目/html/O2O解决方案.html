@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商联达O2O解决方案_全行业O2O系列开发</title>
+		<script src="../js/jquery-3.5.0.min.js"></script>
+		<link rel="icon" href="../img/favicon.ico.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
+		<style>
+			*{
+	    		margin: 0px;
+	    		padding: 0px;
+	    	}
+	    	ul,ol{
+	    		list-style: none;
+	    	}
+			.zhj_banner{
+				width: 100%;
+				height: 440px;
+				min-width: 1500px;
+				margin-top: 100px;
+				background: url(../img/zhj_banner2.jpg)center center no-repeat;
+			}
+			.zhj_wrap{
+				min-width: 1500px;
+				margin-top: 100px;
+			}
+			.zhj_wrap>div{
+				margin: 0 auto;
+				width: 1200px;
+			}
+			.zhj_wrap>div>h2{
+				text-align: center;
+   				font-size: 32px;
+    			color: #222;
+    			font-style: normal;
+			}
+			.zhj_wrap>div>p{
+				font-size: 14px;
+			    line-height: 30px;
+			    color: #6e6e6e;
+			    margin: 20px auto 0;
+			    width: 710px;
+			    text-align: center;
+			}
+			.zhj_sub{
+				padding: 0;
+			    width: 1020px;
+			    min-width: 1020px;
+			    height: 300px;
+			    margin: 0 auto;
+			    margin-top: 40px;
+			}
+			.zhj_sub>ul{
+				positposition: relative;
+			    width: 100%;
+			    height: 100px;
+			}
+			.zhj_sub>ul>li{
+				float: left;
+				overflow: hidden;
+    			width: 33%;
+    			height: 80px;
+    			padding: 10px 0;
+    			transition: all 1s; 
+			}
+			
+			
+			
+			.zhj_sub>ul>li>.zhj_icon{
+				float: left;
+				width: 78px;
+				height: 78px;
+				margin-left: 10px;
+				border-radius: 0;
+    			background: #f6f6f6;
+			}
+			.zhj_sub>ul>li>.zhj_icon>i{
+				display: block;
+			    margin: 0 auto;
+			    background: url(../img/zhj_icons.png) no-repeat;
+			    width: 78px;
+			    height: 78px;
+			}
+			.zhj_sub>.zhj_ul1>li:nth-of-type(1)>.zhj_icon>i{
+				background-position: -160px -0px;
+			}
+			.zhj_sub>.zhj_ul1>li:nth-of-type(2)>.zhj_icon>i{
+				background-position: -160px -562px;
+			}
+			.zhj_sub>.zhj_ul1>li:nth-of-type(3)>.zhj_icon>i{
+				background-position: -160px -160px;
+			}
+			.zhj_sub>.zhj_ul2>li:nth-of-type(1)>.zhj_icon>i{
+				background-position: -160px -240px;
+			}
+			.zhj_sub>.zhj_ul2>li:nth-of-type(2)>.zhj_icon>i{
+				background-position: -160px -320px;
+			}
+			.zhj_sub>.zhj_ul2>li:nth-of-type(3)>.zhj_icon>i{
+				background-position: -160px -400px;
+			}
+			.zhj_sub>.zhj_ul3>li:nth-of-type(1)>.zhj_icon>i{
+				background-position: -160px -480px;
+			}
+			.zhj_sub>.zhj_ul3>li:nth-of-type(2)>.zhj_icon>i{
+				background-position: -5px -1600px;
+			}
+			.zhj_sub>.zhj_ul3>li:nth-of-type(3)>.zhj_icon>i{
+				background-position: 0px -245px;
+			}
+			.zhj_sub>ul>li>.zhj_desc{
+				width: 248px;
+				height: 80px;
+				padding-left: 95px;
+				line-height:45px;
+			}
+			.zhj_sub>ul>li>.zhj_desc>h3{
+				font-weight: 500;
+			}
+			.zhj_sub>ul>li>.zhj_desc>p{
+				font-size: 12px;
+			    height: 34px;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    line-height: 15px;
+			    white-space: nowrap;
+			    width: 100%;
+			    color: #888;
+			}
+			.zhj_sub>.zhj_ul1>li:nth-of-type(1):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul1>li:nth-of-type(2):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul1>li:nth-of-type(3):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul2>li:nth-of-type(1):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul2>li:nth-of-type(2):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul2>li:nth-of-type(3):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul3>li:nth-of-type(1):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul3>li:nth-of-type(2):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_sub>.zhj_ul3>li:nth-of-type(3):hover>.zhj_desc p{
+				white-space: normal;
+    			line-height: 18px;
+			}
+			.zhj_M1{
+				min-width: 1500px;
+				padding-top: 80px;
+				padding-bottom: 80px;
+			}
+			.zhj_M1>div{
+				width: 1200px;
+				height: 530px;
+				margin: 0 auto;
+			}
+			.zhj_M1>div>h2{
+				text-align: center;
+			    font-size: 32px;
+			    color: #222;
+			}
+			.zhj_M1>div>p{
+				font-size: 14px;
+			    line-height: 30px;
+			    color: #6e6e6e;
+			    margin: 20px auto 68px;
+			    width: 710px;
+			    text-align: center;
+			}
+			.zhj_M1>div>ul{
+				padding: 0 36px;
+			}
+			.zhj_M1>div>ul>li{
+				width: 176px;
+			    height: 176px;
+			    float: left;
+			    margin: 6px;
+			    transition: all 1s; 
+			}
+			.zhj_M1>div>ul>li:hover{
+				transform: scale(1.05);
+			}
+			.zhj_M1>div>ul>li>img{
+				display: block;
+			    margin: 0 auto;
+			    margin-top: 25px;
+			}
+			.zhj_M1>div>ul>li>p{
+				margin-top: 40px;
+			    text-align: center;
+			    font-size: 16px;
+			    color: white;
+			}
+			.zhj_M2{
+				min-width: 1500px;
+				padding-top: 60px;
+				padding-bottom: 80px;
+			}
+			.zhj_M2>div{
+				width: 1200px;
+				height: 510px;
+				margin: 0 auto;
+			}
+			.zhj_M2>div>h2{
+				font-size: 32px;
+			    text-align: center;
+			    padding: 50px 0 43px 0;
+			}
+			.zhj_M2>div>p{
+				font-size: 14px;
+			    line-height: 30px;
+			    color: #6e6e6e;
+			    margin: 20px auto 68px;
+			    text-align: center;
+			}
+			.zhj_M2>div>ul{
+				overflow: hidden;
+    			padding: 0 36px;
+			}
+			.zhj_M2>div>ul>li{
+				float: left;
+				width: 178px;
+			    height: 265px;
+			    padding: 0 20px;
+			    box-sizing: border-box;
+			    border: 1px solid #e3e3e3;
+			    border-radius: 10px;
+			    margin: 0 23px;
+			    transition: all 1s; 
+			}
+			.zhj_M2>div>ul>li:hover{
+				border: 1px solid rgb(153,205,107);
+			}
+			.zhj_M2>div>ul>li>img{
+				display: block;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			.zhj_M2>div>ul>li>p:nth-of-type(1){
+				font-weight: 600;
+			    margin-top: 20px;
+			    text-align: center;
+			}
+			.zhj_M2>div>ul>li>p:nth-of-type(2){
+				margin-top: 20px;
+    			color: #666;
+    			font-size: 14px;
+			}
+			.zhj_M3{
+				background: url(../img/zhj_bg.jpg) no-repeat;
+			    width: 100%;
+			    min-width: 1500px;
+			    padding-bottom: 50px;
+			    position: relative;
+			    background-size: cover;
+			}
+			.zhj_M3>div{
+				width: 1200px;
+    			margin: 0 auto;
+			}
+			.zhj_M3>div>h2{
+				padding: 100px 0 34px 0;
+			    color: #222;
+			    font-size: 32px;
+			    text-align: center
+			}
+			.zhj_M3>div>ul{
+				height: 278px;
+			    position: relative;
+			    padding: 0 36px;
+			    margin-top: 34px;
+			}
+			.zhj_M3>div>ul>li{
+				width: 236px;
+			    height: 280px;
+			    float: left;
+			    margin: 0 23px;
+			    top: 0px;
+			    background: white;
+			    transition: all 1s; 
+			}
+			.zhj_M3>div>ul>li:hover{
+				position: relative;
+				top: -22px;
+			}
+			.zhj_M3>div>ul>li>img{
+				display: block;
+    			margin: 0 auto;
+			}
+			.zhj_M3>div>ul>li>p:nth-of-type(1){
+				text-align: center;
+			    font-weight: 600;
+			    margin-top: 20px;
+			}
+			.zhj_M3>div>ul>li>p:nth-of-type(2){
+				font-size: 14px;
+				margin-top: 20px;
+			    text-align: center;
+			    color: #888;
+			    padding: 0 6px;
+			}
+			.zhj_M4{
+				min-width: 1500px;
+				padding-bottom: 80px;
+    			padding-top: 80px;
+			}
+			.zhj_M4>div{
+				position: relative;
+				width: 1200px;
+    			margin: 0 auto;
+			}
+			.zhj_M4>div>h2{
+				text-align: center;
+			    font-size: 32px;
+			    color: #222;
+			}
+			.zhj_M4>div>p{
+				font-size: 14px;
+			    line-height: 30px;
+			    color: #6e6e6e;
+			    margin: 32px auto 68px;
+			    text-align: center;
+			}
+			.zhj_M4>div>ul{
+				padding: 0 36px;
+			    display: flex;
+			    flex-wrap: wrap;
+			}
+			.zhj_M4>div>ul>li{
+				float: left;
+			    width: 305px;
+			    height: 260px;
+			    box-sizing: border-box;
+			    border-radius: 10px;
+			    margin: 4px 35px;
+			}
+			.zhj_M4>div>ul>li:hover{
+				background: #f6f6f6;
+			}
+			.zhj_M4>div>ul>li>p:nth-of-type(1){
+				font-size: 14px;
+				height: 50px;
+			    line-height: 50px;
+			    font-weight: 600;
+			}
+			.zhj_M4>div>ul>li>p:nth-of-type(2){
+				font-size: 14px;
+				color: #888;
+			}
+			.zhj_ds{
+            	width: 100%;
+            	min-width: 1500px;
+            	margin: auto;
+			    overflow: hidden;
+			    text-align: center;
+			    position: relative;
+			    background: url(../img/zhj_background2.png) center no-repeat;
+			    height: 210px;
+			    background-size: 100% 100%;
+            }
+            .zhj_ds>h2{
+            	font-weight: 500;
+            	color: #fff;
+			    text-align: center;
+			    font-size: 32px;
+			    line-height: 80px;
+			    margin-top: 20px;
+            }
+            .zhj_ds>div>a{
+            	display: inline-block;
+   				width: 214px;
+			    height: 48px;
+			    color: #fff;
+			    line-height: 46px;
+			    text-align: center;
+			    border-radius: 10px;
+			    background: transparent;
+			    font-size: 24px;
+			    border: 1px solid white;
+			    margin-top: 20px;
+			    text-decoration: none 
+            }
+            .zhj_foot{
+            	width: 100%;
+            	min-width: 1500px;
+			    height: 358px;
+			    box-sizing: border-box;
+			    padding-top: 37px;
+			    background-color: black;
+			    color: white;
+			    font-size: 12px;
+            }
+            .zhj_foot>.zhj_footbox{
+            	width: 1220px;
+    			margin: 0 auto;
+    			padding-left: 32px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top{
+            	height: 200px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left{
+            	float: left;
+   				width: 295px;	
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left1{
+            	margin-bottom: 25px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left1>span{
+            	float: left;
+            	width: 40px;
+			    height: 40px;
+			    background: url(../img/zhj_kefu.png) no-repeat;
+			    background-size: 100% 100%;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left1>div>p{
+            	font-size: 14px;
+			    line-height: 16px;
+			    margin-bottom: 10px;
+			    font-weight: 300;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left2{
+             	height: 78px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left2>span{
+            	float: left;
+            	width: 34px;
+			    height: 41px;
+			    background: url(../img/zhj_bh.png) no-repeat;
+			    background-size: 100% 100%;
+			    margin-top: 12px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left2>.zhj_foot_top-left2box{
+            	padding-left: 60px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left2>.zhj_foot_top-left2box>div{
+            	padding-left: 10px;
+   				border-left: 1px dashed rgba(255,255,255,0.3)
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-left>.zhj_foot_top-left2>.zhj_foot_top-left2box>div>p{
+            	font-weight: 300;
+            	line-height: 18px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right{
+            	float: left;
+   				border-left: 1px solid rgba(255,255,255,0.3);
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>ul{
+            	float: left;
+    			padding-left: 78px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>ul>li{
+            	line-height: 26px;
+    			color: rgba(255,255,255,.6);
+    			font-size: 12px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>ul>li:nth-of-type(1){
+            	font-size: 18px;
+    			margin-bottom: 20px;
+    			color: white;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>div{
+            	margin-left: 100px;
+            	float: left;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>div>p{
+             	text-align: center;
+             	font-size: 18px;
+    			margin-bottom: 20px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>div>div{
+            	background: white;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>div>div>img{
+            	width: 97px;
+            	height: 97px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_top>.zhj_foot_top-right>div>div>p{
+            	text-align: center;
+            	display: block;
+			    height: 24px;
+			    line-height: 24px;
+			    background-color: black; 
+			}
+            .zhj_foot>.zhj_footbox>.zhj_foot_bottom{
+            	height: 100px;
+            	line-height: 60px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_bottom>span{
+            	display: inline-block;
+			    padding-left: 28px;
+			    background: url(../img/zhj_dizhi.png) no-repeat 15px center;
+			    background-size: 9px 11px;
+			    line-height: 16px;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_bottom>p{
+            	color: #656565;
+   				text-align: center;
+            }
+            .zhj_foot>.zhj_footbox>.zhj_foot_bottom>p>a{
+            	font-size: 12px;
+    			color: #c5c6c4;
+            	text-decoration: none;
+            }
+		</style>
+	</head>
+	<body>
+		<!--头部顶部-->
+			<div class="header_top">
+				<!--头部顶部右边导航栏-->
+				<div class="header_top_right">
+					<a href="#">服务</a>
+					<span>|</span>
+					<a href="#">上海公司</a>
+					<span>|</span>
+					<a href="#">北京公司</a>
+					<span>|</span>
+					<a href="#">广州公司</a>
+					<a href="#">全国统一热线 400-881-0877</a>
+				</div>
+			</div>
+			<!--头部-->
+			<header>
+				<!--头部主要部分-->
+				<div class="header_main">
+					<!--头部左侧logo-->
+					<div class="header_logo">
+						<img src="../img/cjc1_sldlogo.png" class="img_left_show"/>
+					</div>
+					<!--头部中部导航栏-->
+					<nav>
+						<ul class="header_nav">
+							<li><a href="../index.html">首页</a></li>
+							<li><a href="#">软件产品</a>
+								<!--软件产品的下拉框-->
+								<div class="soft_production">
+									<!--软件产品下拉框的主要部分-->
+									<div class="soft_production_main">
+										<!--软件产品下拉框的左侧部分-->
+										<div class="soft_production_main_left">
+											<ul class="main_left_list">
+												<!--每个选项-->
+												<li>
+													<a href="B2B2C多用户商城系统.html" target="_blank">
+														<img src="../img/cjc1_list1.png"/>
+														<div class="text_content">
+															<h3>B2B2C多用户商城系统
+																<em>HOT</em>
+															</h3>
+															<p>类似天猫或京东的商城平台，支持自营和商家入驻，支持O2O</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="国际商城系统.html" target="_blank">
+														<img src="../img/cjc2_list2.png"/>
+														<div class="text_content">
+															<h3>英文版商城系统
+																<em>NEW</em>
+															</h3>
+															<p>国际版商城系统，适合跨境出口、国外独立运营及多语种电商</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc3_list3.png"/>
+														<div class="text_content">
+															<h3>直播+短视频电商系统
+																<em>HOT</em>
+															</h3>
+															<p>融合直播+社交短视频+电商购物于一体的商城系统</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="B2C自营商城系统.html" target="_blank">
+														<img src="../img/cjc4_list4.png"/>
+														<div class="text_content">
+															<h3>B2C自营商城系统</h3>
+															<p>快速搭建多终端在线零售官方商城，打通会员、积累客户，支持o2o</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc5_list5.png"/>
+														<div class="text_content">
+															<h3>全渠道新零售系统</h3>
+															<p>新零售的核心在于线上线下的结合，商联达新零售系统包含商</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc6_list6.png"/>
+														<div class="text_content">
+															<h3>APP商城系统</h3>
+															<p>覆盖IOS&Android双平台的原生app,系统功能全面，开源发售</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="B2B批发商城系统.html" target="_blank">
+														<img src="../img/cjc7_list7.png"/>
+														<div class="text_content">
+															<h3>B2B批发商城系统</h3>
+															<p>能同时支持在线批发、订货、零售、分销的电商平台系统</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="知识付费系统.html" >
+														<img src="../img/cjc8_list8.png"/>
+														<div class="text_content">
+															<h3>知识付费系统</h3>
+															<p>支持直播/图文/音频/社群等多种内容付费模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc9_list9.png"/>
+														<div class="text_content">
+															<h3>微信商城系统</h3>
+															<p>超会卖货的移动微商城支持多种分销模式，快速提升业务收入</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="联到O2O商城系统.html">
+														<img src="../img/cjc10_list10.png"/>
+														<div class="text_content">
+															<h3>O2O商城系统
+																<em>HOT</em>
+															</h3>
+															<p>适应同城电商,京东到家,社区新零售等多种O2O业务模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc11_list11.png"/>
+														<div class="text_content">
+															<h3>电商平台个性化定制</h3>
+															<p>您的业务很独特，商联达为您在标准版基础上定制开发，大大缩短</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc12_list12.png"/>
+														<div class="text_content">
+															<h3>小程序商城系统</h3>
+															<p>全面打通微信及支付宝2大小程序，统一装修，数据同步</p>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<!--软件产品下拉框的右侧部分-->
+										<div class="soft_production_main_right">
+											<h3>全终端覆盖</h3>
+											<ul>
+												<li><img src="../img/cjc17_list17.png"/></li>
+												<li><img src="../img/cjc19_list19.png"/></li>
+												<li><img src="../img/cjc15_list15.png"/></li>
+												<li><img src="../img/cjc14_list14.png"/></li>
+												<li><img src="../img/cjc13_list13.png"/></li>
+												<li><img src="../img/cjc16_list16.png"/></li>
+											</ul>
+											<h3>多种语言可选</h3>
+											<p>拥有PHP及JAVA两种语言版本的商城系统</p>
+											<div>
+												<img src="../img/cjc18_list18.png"/>
+											</div>
+										</div>
+									</div>
+									<!--下拉框的尾部部分-->
+									<div class="production_footer">
+										<div class="production_footer_contain">
+											<div class="footer_contain_left">
+												<dl>
+													<dt style="color: #999;">电商配套系统:</dt>
+													<dd>电商收银系统</dd>
+													<dd style="color: red;">骑手配送系统</dd>
+													<dd>电商erp系统</dd>
+													<dd>系统对接</dd>
+												</dl>
+											</div>
+											<div class="footer_contain_right">
+												<span>全国统一服务热线：</span>400-881-0877
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">解决方案</a>
+								<!--解决方案的下拉框-->
+								<div class="soft_production">
+									<!--解决方案下拉框的主要部分-->
+									<div class="soft_production_main">
+										<!--解决方案下拉框的左侧部分-->
+										<div class="soft_production_main_left">
+											<ul class="main_left_list">
+												<!--每个选项-->
+												<li>
+													<a href="新零售.html" target="_blank">
+														<img src="../img/cjc_1list1.png"/>
+														<div class="text_content">
+															<h3>新零售电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>线上线下深度融合</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="国际.html" target="_blank">
+														<img src="../img/cjc_2list2.png"/>
+														<div class="text_content">
+															<h3>国际电商解决方案</h3>
+															<p>多语种支持</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="生鲜.html" target="_blank">
+														<img src="../img/cjc3_list3.png"/>
+														<div class="text_content">
+															<h3>生鲜电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>帮助生鲜商家快速布局线上</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="O2O解决方案.html" >
+														<img src="../img/cjc4_list4.png"/>
+														<div class="text_content">
+															<h3>O2O电商解决方案</h3>
+															<p>适应多种O2O业务模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc5_list5.png"/>
+														<div class="text_content">
+															<h3>百货商场电商解决方案</h3>
+															<p>线上线下资源整合</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc6_list6.png"/>
+														<div class="text_content">
+															<h3>医药电商解决方案</h3>
+															<p>助力医药行业开启线上业务</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc7_list7.png"/>
+														<div class="text_content">
+															<h3>视频电商解决方案
+																<em>HOT</em>
+															</h3>
+															<p>直播短视频+电商新模式</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc8_list8.png"/>
+														<div class="text_content">
+															<h3>B2B平台解决方案</h3>
+															<p>大宗交易电商平台</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc9_list9.png"/>
+														<div class="text_content">
+															<h3>企业采购电商解决方案</h3>
+															<p>用数字和链接让企业采购更简单</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc_10list10.png"/>
+														<div class="text_content">
+															<h3>跨境电商解决方案</h3>
+															<p>进口出口电商平台开发</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" >
+														<img src="../img/cjc_11list11.png"/>
+														<div class="text_content">
+															<h3>分销电商解决方案</h3>
+															<p>专属分销模式定制</p>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="../img/cjc12_list12.png"/>
+														<div class="text_content">
+															<h3>农村扶贫电商解决方案</h3>
+															<p>双向流农村电商平台</p>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<!--解决方案的右侧部分-->
+										<div class="soft_production_main_right">
+											<h3>全终端覆盖</h3>
+											<ul>
+												<li><img src="../img/cjc17_list17.png"/></li>
+												<li><img src="../img/cjc19_list19.png"/></li>
+												<li><img src="../img/cjc15_list15.png"/></li>
+												<li><img src="../img/cjc14_list14.png"/></li>
+												<li><img src="../img/cjc13_list13.png"/></li>
+												<li><img src="../img/cjc16_list16.png"/></li>
+											</ul>
+											<h3>配套软件推荐</h3>
+											<div>
+												<div>多用户商城系统</div>
+												<div>直播电商系统</div>
+												<div>骑手配送系统</div>
+												<div>电商收银系统</div>
+												<div>O2O商城系统</div>
+												<div>B2C商城系统</div>
+											</div>
+										</div>
+									</div>
+									<!--下拉框的尾部部分-->
+									<div class="production_footer">
+										<div class="production_footer_contain">
+											<div class="footer_contain_left">
+												<dl>
+													<dt style="color: #999;">定制解决方案:</dt>
+													<dd>区块链+积分商城解决方案</dd>
+													<dd>区块链+商品溯源解决方案</dd>
+													<dd style="color: red;">更多解决方案</dd>
+												</dl>
+											</div>
+											<div class="footer_contain_right">
+												<span>全国统一服务热线：</span>400-881-0877
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">电商代运营</a></li>
+							<li><a href="客户案列.html" target="_blank">客户案例</a></li>
+							<li><a href="电商学院.html" target="_blank">电商学院</a></li>
+							<li><a href="关于我们.html" target="_blank">关于我们</a></li>
+						</ul>
+						<!--导航栏右侧logo-->
+						<div class="header_nav_right_logo">
+							<img src="../img/cjc2_ckys.png" class="img_right_show"/>
+							<p>查看演示</p>
+						</div>
+					</nav>
+				</div>
+			</header>
+		
+		
+		
+		<div class="banner"></div>
+		<div class="zhj_banner">
+		</div>
+		                 <!------------------------O2O系统平台开发------------------------->
+		<div class="zhj_wrap">
+			<div>
+				<h2>O2O系统平台开发---全方位解决您的O2O系统需求</h2>
+				<p>打通线上线下资源，融合商联达多年运营理念精髓，帮您快速打造O2O平台实现梦想</p>
+			</div>
+		</div>
+		<div class="zhj_sub">
+			<ul class="zhj_ul1">
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>同城电商O2O系统</h3>
+						<p>打造全方位的同城生活运营系统，招收全国各地代理合作运营商，以城市为分站运营，覆盖所有O2O行业，将移动电商、社交、本地生活服务一体化融合，真正帮助有创业梦想的企业快速搭建O2O平台。</p>
+					</div>
+				</li>
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>县城生活O2O系统</h3>
+						<p>以县城为运营单位，打造本县人自己引以为傲的O2O平台。将本县城中的商家全部引入，涵盖餐饮、酒店、便利店、KTV、烟酒茶行、土特产店、旅游景点、培训机构、婚庆服务、母婴用品店等商家，做到能真正服务本县人喜爱常用的商城平台。</p>
+					</div>
+				</li>
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>同城电商O2O系统</h3>
+						<p>打造全方位的同城生活运营系统，招收全国各地代理合作运营商，以城市为分站运营，覆盖所有O2O行业，将移动电商、社交、本地生活服务一体化融合，真正帮助有创业梦想的企业快速搭建O2O平台。</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="zhj_ul2">
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>B2B2C商城O2O系统</h3>
+						<p>平台通过建立线上商城，签约多方渠道供应商，用户线上下单，各方商户在线上提供服务，平台进行管理的O2O系统。</p>
+					</div>
+				</li>
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>连锁店电商O2O系统</h3>
+						<p>针对区域性品牌零售直营和连锁企业，提供线上商城和线下门店服务终端，结合商品、会员、订单、营销等模块实现线上、线下相互融合的O2O模式</p>
+					</div>
+				</li>
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>美团式O2O系统</h3>
+						<p>外卖配送以美团为首的经典经营模式，我们将基于LBS定位，采用B2B2C多用户商城，引入当地外卖商家，同时利用自营+招商店的经营模式，让商家进行接单自主发货或安排配送员送货上门。</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="zhj_ul3">
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>垂直行业O2O系统</h3>
+						<p>平垂直行业O2O平台开发，针对某行业进行线下与线下打通，如美容行业O2O系统、汽车行业O2O系统、家居行业O2O系统、旅游行业O2O系统、酒店行业O2O系统等平台开发。</p>
+					</div>
+				</li>
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>社区O2O系统</h3>
+						<p>以社区为生活半径，打造社区O2O电商平台，将本地商家入驻，打通本地配送服务，方便社区居民手机下单，轻松享受电商服务。同时结合物业管理的功能，如代交水电、煤气费用等。</p>
+					</div>
+				</li>
+				<li>
+					<div class="zhj_icon">
+						<i></i>
+					</div>
+					<div class="zhj_desc">
+						<h3>更多O2O系统定制</h3>
+						<p>商联达专注企业级软件开发服务10余年，目前已经研发出自主版权的标准版O2O系统，可根据客户的需求在标准版上灵活定制出个性化O2O电商平台。</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		                 <!------------------------------O2O系统标准功能模块-------------------------------->
+		<div class="zhj_M1">
+			<div>
+				<h2>O2O系统标准功能模块</h2>
+				<p>商联达O2O系统有成熟的标准版，可根据企业的个性化O2O业务需求定制专属O2O解决方案</p>
+				<ul>
+					<li style="background: #5FABE7;">
+						<img src="../img/zhj_a.png"/>
+						<p>商家管理</p>
+					</li>
+					<li style="background: #F5AB40";>
+						<img src="../img/zhj_b.png"/>
+						<p>商品管理</p>
+					</li>
+					<li style="background: #5888CA";>
+						<img src="../img/zhj_c.png"/>
+						<p>订单管理</p>
+					</li>
+					<li style="background: #1EC78C";>
+						<img src="../img/zhj_d.png"/>
+						<p>会员管理</p>
+					</li>
+					<li style="background: #EE5454";>
+						<img src="../img/zhj_e.png"/>
+						<p>促销管理</p>
+					</li>
+					<li style="background: #65A7D9";>
+						<img src="../img/zhj_f.png"/>
+						<p>积分商城</p>
+					</li>
+					<li style="background: #7E57CE";>
+						<img src="../img/zhj_g.png"/>
+						<p>店铺管理</p>
+					</li>
+					<li style="background: #1EBDD3";>
+						<img src="../img/zhj_i.png"/>
+						<p>商聊管理</p>
+					</li>
+					<li style="background: #B2D449";>
+						<img src="../img/zhj_j.png"/>
+						<p>支付管理</p>
+					</li>
+					<li style="background: #E14489";>
+						<img src="../img/zhj_k.png"/>
+						<p>广告管理</p>
+					</li>
+					<li style="background: #8387AC";>
+						<img src="../img/zhj_l.png"/>
+						<p>物流配送管理</p>
+					</li>
+					<li style="background: #EE692E";>
+						<img src="../img/zhj_m.png"/>
+						<p>运营数据管理</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		                         <!------------------------O2O系统多终端覆盖---------------------->
+		<div class="zhj_M2">
+			<div>
+				<h2>O2O系统多终端覆盖 让平台的营销做的更好</h2>
+				<p>商联达系统覆盖了APP、PC、微信、小程序以及智能终端，为平台完成了线上线下的业务覆盖，增加品牌曝光的同时，更利于平台推广营销</p>
+				<ul>
+					<li>
+						<img src="../img/zhj_sj.png"/>
+						<p>APP端</p>
+						<p>将手机应用装进用户手机里，定期推送活动消息。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_wx.png"/>
+						<p>微信</p>
+						<p>深度整合微信，借势传播，引爆社交交流。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_xcx.png"/>
+						<p>小程序</p>
+						<p>快速搭建小程序，迅速抢占市场，提高品牌知名度。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_pcd.png"/>
+						<p>PC端</p>
+						<p>PC电脑端商城完善购物体验及数据管理。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_dp.png"/>
+						<p>智能硬件</p>
+						<p>对接线下门店收银，与线上交易后台数据同步。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		                      <!--------------------------O2O解决方案核心价值------------------------------>
+		<div class="zhj_M3">
+			<div>
+				<h2>O2O解决方案核心价值</h2>
+				<ul class="zhj_ul1">
+					<li>
+						<img src="../img/zhj_ll.jpg"/>
+						<p>流量打通</p>
+						<p>打通线上线下，线下向线上引流，线上去线下服务。</p>	
+					</li>
+					<li>
+						<img src="../img/zhj_hyuan.jpg"/>
+						<p>会员打通</p>
+						<p>系统自动生成会员卡，给线下客户发会员卡，把线下客户引入线上。</p>	
+					</li>
+					<li>
+						<img src="../img/zhj_sping.jpg"/>
+						<p>商品打通</p>
+						<p>线上商场和线下实体店共用一个商品库，共用一个库存。</p>	
+					</li>
+					<li>
+						<img src="../img/zhj_zf.jpg"/>
+						<p>支付打通</p>
+						<p>可以使用现金，会员卡账号余额，微信扫码，支付宝扫码，Pos刷卡等。</p>	
+					</li>
+				</ul>
+			</div>
+		</div>
+		              <!------------------------商联达O2O系统解决方案优势-------------------------->
+		<div class="zhj_M4">
+			<div>
+				<h2>商联达O2O系统解决方案优势</h2>
+				<p>"走心"做产品，自然与众不同！我们在技术、模式、用户体验、系统更新与维护方面均具有领先优势</p>
+				<ul>
+					<li>
+						<img src="../img/zhj_111.jpg"/>
+						<p>多种加密防护、固若金汤</p>
+						<p>商联达通过程序、部署、备份、日志等多个环节的防护，为您的应用数据提供坚固的保护。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_222.jpg"/>
+						<p>内置丰富的API接口</p>
+						<p>商联达O2O系统的后台拥有超多预留接口，轻松对接各类API，让业务更具流程化。领先的O2O业务模式。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_333.jpg"/>
+						<p>领先的O2O业务模式</p>
+						<p>国内领先的O2O+B2B2C+SOLOMO模式，紧跟O2O电子商务的潮流，不错过每一次风口。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_444.jpg"/>
+						<p>流量打通</p>
+						<p>首页、专题、店铺从PC到移动，想变就变，给用户带来更顺畅、更自然的操作体验，美观兼具实用。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_555.jpg"/>
+						<p>互动优先，即时聊天</p>
+						<p>系统自带智能客服系统，可轻松实现社交+电商新模式，打造社交型O2O，粉丝年度高。</p>
+					</li>
+					<li>
+						<img src="../img/zhj_666.jpg"/>
+						<p>敏锐的行业前沿</p>
+						<p>商联达拥有100多人技术团队，并设有专门的市场商学院，具有敏锐的市场前瞻，能做到真正懂客户所需。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="zhj_ds">
+			<h2>马上开启自己的电商业务</h2>
+			<div>
+				<a href="#">立即体验</a>
+			</div>
+		</div>
+		                             <!--------------------底部------------------------->
+		<div class="zhj_foot">
+			<div class="zhj_footbox">
+				<div class="zhj_foot_top">
+					<div class="zhj_foot_top-left">
+						<div class="zhj_foot_top-left1">
+							<span></span>
+							<div style="padding-left: 60px;">
+								<p>全国统一服务热线</p>
+								<p style="font-size: 30px;font-weight: 900;">400-881-0877</p>
+							</div>
+						</div>
+						<div class="zhj_foot_top-left2">
+							<span></span>
+							<div class="zhj_foot_top-left2box">
+								<div>
+									<p style="margin-bottom:4px;">国家高新技术企业编号：</p>
+									<p style="opacity:0.6;margin-bottom:10px;">GR201811009357</p>
+									<p style="margin-bottom: 4px;margin-bottom: 4px">中关村高新技术企业编号：</p>
+									<p style="opacity:0.6;margin-bottom:10px;">20182010625501</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="zhj_foot_top-right">
+						<ul>
+							<li>关于商联达</li>
+							<li>公司介绍</li>
+							<li>荣誉资质</li>
+							<li>联系我们</li>
+							<li>合作案例</li>
+							<li>公司新闻</li>
+						</ul>
+						<ul>
+							<li>热门电商产品</li>
+							<li>多商户商城系统</li>
+							<li>同城O2O商城系统</li>
+							<li>B2B批发商城系统</li>
+							<li>电商收银系统</li>
+							<li>电商ERP系统</li>
+						</ul>
+						<ul>
+							<li>电商解决方案</li>
+							<li>新零售解决方案</li>
+							<li>跨境电商解决方案</li>
+							<li>农村电商解决方案</li>
+							<li>区块链+电商解决方案</li>
+							<li>商业综合体解决方案</li>							
+						</ul>
+						<ul>
+							<li>电商学院</li>
+							<li>电商干货</li>
+							<li>行业快讯</li>
+							<li>新零售</li>
+							<li>B2B电商</li>
+							<li>B2B2C电商</li>
+						</ul>
+						<div>
+							<p>关注我们</p>
+							<div>
+								<img src="../img/gif.jpg"/>
+								<p>获最新电商动态</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="zhj_foot_bottom">
+					<span>上海总部：上海市闵行区申虹路666弄1号楼606</span>
+					<span>北京公司地址：北京市海淀区中关村东升科技园B-2楼1F</span>
+					<span>广州公司地址：广州市天河区珠江新城珠江西路8号高德置地D座15楼</span>
+					<p>Copyright2006-2019 商联达_全球领先的新零售智慧电商生态系统及服务提供商!All Rights Reserved.
+						<a href="">沪ICP备：19040631</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			//			获取body的宽度  给到下拉框
+				var body_width =$("body").width();
+				$(".soft_production").width(body_width);
+				//获取当前index值
+				var index;
+	//			滚轮事件   当滚动条大于    的时候头部变化
+				$(window).scroll(function(){
+//					检测滚动条数值
+//					console.log($("html,body").scrollTop());
+					if($("html,body").scrollTop()>652){
+						$("header").addClass("header_show");
+						$(".img_left_show").attr("src","../img/cjc1_logo.png");
+						$(".img_right_show").attr("src","../img/cjc1_ckys_04.png");
+						$("header>.header_main>nav>.header_nav>li").addClass("li_show");
+						$("header>.header_main>nav>.header_nav_right_logo>p").addClass("p_show");
+					}else{
+						$("header").removeClass("header_show");
+						$(".img_left_show").attr("src","../img/cjc1_sldlogo.png");
+						$("header>.header_main>nav>.header_nav>li").removeClass("li_show");
+						$("header>.header_main>nav>.header_nav_right_logo>p").removeClass("p_show");
+						$(".img_right_show").attr("src","../img/cjc2_ckys.png");
+					}
+				})
+			
+			
+			
+			
+			
+			$(".zhj_ul1 li").eq(0).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul1 .zhj_icon>i").eq(0).css({"background-position": "-240px -0px"});
+				$(".zhj_desc").eq(0).css({"width":"95%"});
+				$(".zhj_desc").eq(1).css({"display":"none"});
+				$(".zhj_ul1 li").eq(1).css({"width":"100"});
+				$(".zhj_desc").eq(2).css({"display":"none"});
+				$(".zhj_ul1 li").eq(2).css({"width":"100"});
+				$(".zhj_desc h3").eq(0).css({"color":"white"});
+				$(".zhj_desc p").eq(0).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul1 li").eq(0).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul1 .zhj_icon>i").eq(0).css({"background-position": "-160px -0px"});
+				$(".zhj_desc").eq(1).css({"display":"block"});
+				$(".zhj_ul1 li").eq(1).css({"width":"33%"});
+				$(".zhj_desc").eq(2).css({"display":"block"});
+				$(".zhj_ul1 li").eq(2).css({"width":"33%"});
+				$(".zhj_desc h3").eq(0).css({"color":"black"});
+				$(".zhj_desc p").eq(0).css({"color":"#888"});
+			})
+			$(".zhj_ul1 li").eq(1).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul1 .zhj_icon>i").eq(1).css({"background-position": "-240px -562px"});
+				$(".zhj_desc").eq(1).css({"width":"95%"});
+				$(".zhj_desc").eq(0).css({"display":"none"});
+				$(".zhj_ul1 li").eq(0).css({"width":"100"});
+				$(".zhj_desc").eq(2).css({"display":"none"});
+				$(".zhj_ul1 li").eq(2).css({"width":"100"});
+				$(".zhj_desc h3").eq(1).css({"color":"white"});
+				$(".zhj_desc p").eq(1).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul1 li").eq(1).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul1 .zhj_icon>i").eq(1).css({"background-position": "-160px -562px"});
+				$(".zhj_desc").eq(0).css({"display":"block"});
+				$(".zhj_ul1 li").eq(0).css({"width":"33%"});
+				$(".zhj_desc").eq(2).css({"display":"block"});
+				$(".zhj_ul1 li").eq(2).css({"width":"33%"});
+				$(".zhj_desc h3").eq(1).css({"color":"black"});
+				$(".zhj_desc p").eq(1).css({"color":"#888"});
+			})
+			$(".zhj_ul1 li").eq(2).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul1 .zhj_icon>i").eq(2).css({"background-position": "-240px -160px"});
+				$(".zhj_desc").eq(2).css({"width":"95%"});
+				$(".zhj_desc").eq(0).css({"display":"none"});
+				$(".zhj_ul1 li").eq(0).css({"width":"100"});
+				$(".zhj_desc").eq(1).css({"display":"none"});
+				$(".zhj_ul1 li").eq(1).css({"width":"100"});
+				$(".zhj_desc h3").eq(2).css({"color":"white"});
+				$(".zhj_desc p").eq(2).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul1 li").eq(2).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul1 .zhj_icon>i").eq(2).css({"background-position": "-160px -160px"});
+				$(".zhj_desc").eq(0).css({"display":"block"});
+				$(".zhj_ul1 li").eq(0).css({"width":"33%"});
+				$(".zhj_desc").eq(1).css({"display":"block"});
+				$(".zhj_ul1 li").eq(1).css({"width":"33%"});
+				$(".zhj_desc h3").eq(2).css({"color":"black"});
+				$(".zhj_desc p").eq(2).css({"color":"#888"});
+			})
+			
+			
+			
+			$(".zhj_ul2 li").eq(0).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul2 .zhj_icon>i").eq(0).css({"background-position": "-240px -240px"});
+				$(".zhj_ul2 .zhj_desc").eq(0).css({"width":"95%"});
+				$(".zhj_ul2 .zhj_desc").eq(1).css({"display":"none"});
+				$(".zhj_ul2 li").eq(1).css({"width":"100"});
+				$(".zhj_ul2 .zhj_desc").eq(2).css({"display":"none"});
+				$(".zhj_ul2 li").eq(2).css({"width":"100"});
+				$(".zhj_ul2 .zhj_desc h3").eq(0).css({"color":"white"});
+				$(".zhj_ul2 .zhj_desc p").eq(0).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul2 li").eq(0).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul2 .zhj_icon>i").eq(0).css({"background-position": "-160px -240px"});
+				$(".zhj_ul2 .zhj_desc").eq(1).css({"display":"block"});
+				$(".zhj_ul2 li").eq(1).css({"width":"33%"});
+				$(".zhj_ul2 .zhj_desc").eq(2).css({"display":"block"});
+				$(".zhj_ul2 li").eq(2).css({"width":"33%"});
+				$(".zhj_ul2 .zhj_desc h3").eq(0).css({"color":"black"});
+				$(".zhj_ul2 .zhj_desc p").eq(0).css({"color":"#888"});
+			})
+			$(".zhj_ul2 li").eq(1).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul2 .zhj_icon>i").eq(1).css({"background-position": "-240px -320px"});
+				$(".zhj_ul2 .zhj_desc").eq(1).css({"width":"95%"});
+				$(".zhj_ul2 .zhj_desc").eq(0).css({"display":"none"});
+				$(".zhj_ul2 li").eq(0).css({"width":"100"});
+				$(".zhj_ul2 .zhj_desc").eq(2).css({"display":"none"});
+				$(".zhj_ul2 li").eq(2).css({"width":"100"});
+				$(".zhj_ul2 .zhj_desc h3").eq(1).css({"color":"white"});
+				$(".zhj_ul2 .zhj_desc p").eq(1).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul2 li").eq(1).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul2 .zhj_icon>i").eq(1).css({"background-position": "-160px -320px"});
+				$(".zhj_ul2 .zhj_desc").eq(0).css({"display":"block"});
+				$(".zhj_ul2 li").eq(0).css({"width":"33%"});
+				$(".zhj_ul2 .zhj_desc").eq(2).css({"display":"block"});
+				$(".zhj_ul2 li").eq(2).css({"width":"33%"});
+				$(".zhj_ul2 .zhj_desc h3").eq(1).css({"color":"black"});
+				$(".zhj_ul2 .zhj_desc p").eq(1).css({"color":"#888"});
+			})
+			$(".zhj_ul2 li").eq(2).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul2 .zhj_icon>i").eq(2).css({"background-position": "-240px -400px"});
+				$(".zhj_ul2 .zhj_desc").eq(2).css({"width":"95%"});
+				$(".zhj_ul2 .zhj_desc").eq(0).css({"display":"none"});
+				$(".zhj_ul2 li").eq(0).css({"width":"100"});
+				$(".zhj_ul2 .zhj_desc").eq(1).css({"display":"none"});
+				$(".zhj_ul2 li").eq(1).css({"width":"100"});
+				$(".zhj_ul2 .zhj_desc h3").eq(2).css({"color":"white"});
+				$(".zhj_ul2 .zhj_desc p").eq(2).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul2 li").eq(2).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul2 .zhj_icon>i").eq(2).css({"background-position": "-160px -400px"});
+				$(".zhj_ul2 .zhj_desc").eq(0).css({"display":"block"});
+				$(".zhj_ul2 li").eq(0).css({"width":"33%"});
+				$(".zhj_ul2 .zhj_desc").eq(1).css({"display":"block"});
+				$(".zhj_ul2 li").eq(1).css({"width":"33%"});
+				$(".zhj_ul2 .zhj_desc h3").eq(2).css({"color":"black"});
+				$(".zhj_ul2 .zhj_desc p").eq(2).css({"color":"#888"});
+			})
+			
+			
+			$(".zhj_ul3 li").eq(0).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul3 .zhj_icon>i").eq(0).css({"background-position": "-240px -480px"});
+				$(".zhj_ul3 .zhj_desc").eq(0).css({"width":"95%"});
+				$(".zhj_ul3 .zhj_desc").eq(1).css({"display":"none"});
+				$(".zhj_ul3 li").eq(1).css({"width":"100"});
+				$(".zhj_ul3 .zhj_desc").eq(2).css({"display":"none"});
+				$(".zhj_ul3 li").eq(2).css({"width":"100"});
+				$(".zhj_ul3 .zhj_desc h3").eq(0).css({"color":"white"});
+				$(".zhj_ul3 .zhj_desc p").eq(0).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul3 li").eq(0).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul3 .zhj_icon>i").eq(0).css({"background-position": "-160px -480px"});
+				$(".zhj_ul3 .zhj_desc").eq(1).css({"display":"block"});
+				$(".zhj_ul3 li").eq(1).css({"width":"33%"});
+				$(".zhj_ul3 .zhj_desc").eq(2).css({"display":"block"});
+				$(".zhj_ul3 li").eq(2).css({"width":"33%"});
+				$(".zhj_ul3 .zhj_desc h3").eq(0).css({"color":"black"});
+				$(".zhj_ul3 .zhj_desc p").eq(0).css({"color":"#888"});
+			})
+			$(".zhj_ul3 li").eq(1).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul3 .zhj_icon>i").eq(1).css({"background-position": "-80px -1600px"});
+				$(".zhj_ul3 .zhj_desc").eq(1).css({"width":"95%"});
+				$(".zhj_ul3 .zhj_desc").eq(0).css({"display":"none"});
+				$(".zhj_ul3 li").eq(0).css({"width":"100"});
+				$(".zhj_ul3 .zhj_desc").eq(2).css({"display":"none"});
+				$(".zhj_ul3 li").eq(2).css({"width":"100"});
+				$(".zhj_ul3 .zhj_desc h3").eq(1).css({"color":"white"});
+				$(".zhj_ul3 .zhj_desc p").eq(1).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul3 li").eq(1).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul3 .zhj_icon>i").eq(1).css({"background-position": "-5px -1600px"});
+				$(".zhj_ul3 .zhj_desc").eq(0).css({"display":"block"});
+				$(".zhj_ul3 li").eq(0).css({"width":"33%"});
+				$(".zhj_ul3 .zhj_desc").eq(2).css({"display":"block"});
+				$(".zhj_ul3 li").eq(2).css({"width":"33%"});
+				$(".zhj_ul3 .zhj_desc h3").eq(1).css({"color":"black"});
+				$(".zhj_ul3 .zhj_desc p").eq(1).css({"color":"#888"});
+			})
+			$(".zhj_ul3 li").eq(2).mouseover(function(){
+				$(this).css({"width":"820","background":"#1d9ae1"});
+				$(".zhj_ul3 .zhj_icon>i").eq(2).css({"background-position": "-80px -245px"});
+				$(".zhj_ul3 .zhj_desc").eq(2).css({"width":"95%"});
+				$(".zhj_ul3 .zhj_desc").eq(0).css({"display":"none"});
+				$(".zhj_ul3 li").eq(0).css({"width":"100"});
+				$(".zhj_ul3 .zhj_desc").eq(1).css({"display":"none"});
+				$(".zhj_ul3 li").eq(1).css({"width":"100"});
+				$(".zhj_ul3 .zhj_desc h3").eq(2).css({"color":"white"});
+				$(".zhj_ul3 .zhj_desc p").eq(2).css({"color":"white","width":"90%"});
+			})
+			$(".zhj_ul3 li").eq(2).mouseout(function(){
+				$(this).css({"width":"33%","background":"white"});
+				$(".zhj_ul3 .zhj_icon>i").eq(2).css({"background-position": "0px -245px"});
+				$(".zhj_ul3 .zhj_desc").eq(0).css({"display":"block"});
+				$(".zhj_ul3 li").eq(0).css({"width":"33%"});
+				$(".zhj_ul3 .zhj_desc").eq(1).css({"display":"block"});
+				$(".zhj_ul3 li").eq(1).css({"width":"33%"});
+				$(".zhj_ul3 .zhj_desc h3").eq(2).css({"color":"black"});
+				$(".zhj_ul3 .zhj_desc p").eq(2).css({"color":"#888"});
+			})
+		</script>
+	</body>
+</html>
